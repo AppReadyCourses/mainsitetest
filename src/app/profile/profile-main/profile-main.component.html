@@ -1,0 +1,71 @@
+<div class="desktop-view-layout">
+    <app-navbar-main class="topbar-h">
+    </app-navbar-main>
+    <app-navbar-wide class="topbar-d">
+    </app-navbar-wide>
+
+    <div routerLink="/" class="hslogo-c">
+        <img src="assets/logo/hslogo.png" alt="">
+    </div>
+
+
+    <div class="content-b">
+
+
+
+
+        <!-- <vm-player controls>
+            <vm-video cross-origin="true">
+
+                <source src="http://localhost:4000/video/Morbius.mp4" type="video/mp4" />
+
+            </vm-video>
+
+            <vm-default-ui no-click-to-play>
+
+            </vm-default-ui>
+
+        </vm-player> -->
+
+        <!-- <iframe src="http://localhost:4000/video/Morbius.mp4" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe> -->
+
+
+
+        <!-- <div class="vm-container">
+
+            <vm-player>
+                <vm-hls version="latest">
+                    <source src="https://vz-7da2f6e8-e23.b-cdn.net/4cb6be14-daa4-4541-83de-a110075d03bb/playlist.m3u8" type="application/x-mpegURL" />
+                </vm-hls>
+
+                <vm-ui>
+                    <vm-control-spacer></vm-control-spacer>
+                    <vm-controls full-width>
+                        <vm-control-group>
+                            <vm-scrubber-control></vm-scrubber-control>
+                        </vm-control-group>
+                        <vm-control-group space="top">
+                            <vm-playback-control></vm-playback-control>
+                            <vm-volume-control></vm-volume-control>
+                            <vm-control-spacer></vm-control-spacer>
+                            <vm-time-progress separator="/"></vm-time-progress>
+                            <vm-fullscreen-control></vm-fullscreen-control>
+                        </vm-control-group>
+                    </vm-controls>
+                </vm-ui>
+            </vm-player>
+        </div> -->
+
+        <div class="vm-container">
+            <div style="position: relative; padding-top: 56.25%;"><iframe src="https://iframe.mediadelivery.net/embed/32527/4cb6be14-daa4-4541-83de-a110075d03bb?autoplay=false" loading="lazy" style="border: none; position: absolute; top: 0; height: 100%; width: 100%;" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                    allowfullscreen="true"></iframe></div>
+
+        </div>
+    </div>
+
+
+    <div class="sidebar-a">
+        <app-sidebar-menu-main>
+        </app-sidebar-menu-main>
+    </div>
+</div>

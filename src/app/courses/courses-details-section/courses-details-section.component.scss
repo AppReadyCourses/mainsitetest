@@ -1,0 +1,109 @@
+.course-detail-container {
+    max-width: 350px;
+    background: white;
+    // padding: 10px 11px;
+    box-shadow: rgba(24, 39, 75, 0.15) 0px 19px 80px, rgba(24, 39, 75, 0.15) 0px 10px 60px;
+    width: 100%;
+    border-radius: 18px;
+    margin: 0 auto;
+    // display: flex;
+}
+
+.course-section-header {
+    // margin-top: 1rem;
+    // margin-left: 1rem;
+    // margin: .5rem;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.course-head {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0rem 4rem 0rem;
+}
+
+.right-arrow-icon {
+    width: 30px;
+}
+
+.right-arrow-icon-container {
+    padding-top: .3rem;
+}
+
+.course-head {
+    text-align: center;
+    // margin: 2rem auto;
+    padding-top: 1.5rem;
+    padding-bottom: .8rem;
+}
+
+.hs-logo {
+    width: 12px;
+}
+
+.fire-logo {
+    padding-top: .11rem;
+}
+
+// Bottom
+.section-items {
+    width: 100%;
+    border-radius: 0 0 18px 18px;
+    background: rgb(247, 247, 247);
+}
+
+.section-item:last-child>.section-body {
+    padding-bottom: .8rem;
+}
+
+.divider {
+    content: '';
+    border-bottom: 1px solid rgb(196, 196, 196);
+    width: 300px;
+    margin: .4rem auto 0;
+}
+
+.section-item {
+    margin: .5rem auto;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 1.5rem 0;
+    align-items: center;
+}
+
+.section-title {
+    color: rgb(28, 28, 28);
+    font-size: .9rem;
+}
+
+.section-body {
+    display: flex;
+    justify-content: left;
+    margin-left: 1.2rem;
+    margin-top: -.7rem;
+}
+
+.section-course-counts {
+    font-size: .8rem;
+    margin-left: .4rem;
+    color: rgb(74, 74, 74);
+}
+
+.section-course-duration {
+    font-size: .8rem;
+    color: rgb(74, 74, 74);
+}
+
+.vl {
+    border-left: 1px solid rgb(106, 106, 106);
+    height: 15px;
+    margin: .1rem .7rem;
+}
+
+.section-item:last-child>.divider {
+    display: none;
+}

@@ -1,0 +1,86 @@
+<div class="desktop-view-layout">
+    <app-navbar-main class="topbar-h"> </app-navbar-main>
+    <app-navbar-wide class="topbar-d"> </app-navbar-wide>
+    <div routerLink="/" class="stackmy-logo-c showwlogo">
+        <img src="assets/logo/appready-logo-b.png" alt="">
+    </div>
+
+    <div routerLink="/" class="stackmy-logo-c shwodlogo">
+        <img src="assets/logo/appready-logo-w.png" alt="">
+    </div>
+    <app-sidebar-menu-main class="sidebar-a"></app-sidebar-menu-main>
+
+    <div class="course-detail-container content-b">
+        <div class="course-head">
+            <div class="course-section-container">
+
+                <h4 class="course-section-header">
+                    Topics
+                </h4>
+
+
+                <div>
+                    <!-- <a type="submit" (click)="backClicked()">
+                        <img class="back-logo" src="assets/icon/left-arrow-circle-solid-72-grey.png" alt="" />
+                    </a> -->
+
+                    <a type="submit" class="btn " (click)="backClicked()">
+                           Back to section
+                        </a>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="section-bg">
+            <div class="section-items" [formGroup]="form">
+                <div class="section-single-item" *ngFor="let topic of topics$ | async">
+                    <div class="item-display-container">
+                        <div class="item-display-left">
+                            <label class="form-control">
+                                <input
+                                    
+                                    (change)="onCheckboxChange($event, topic.id)"
+                                    formArrayName="topicCompleted" 
+                                    type="checkbox"
+                                    
+                                    class="section-input"
+                                    [checked]="topic?.topicCompleted"
+                                />
+                                <h4 class="form-section-title" >
+                                    {{ topic.topicName }}
+                                </h4>
+                            </label>
+                            <div class="introduction-container">
+                                <p class="topic-intro">
+                                    {{ topic.topicIntroduction }}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="item-display-right" [routerLink]="['/courses/sections/topics/detail', topic.id]">
+                            <svg-icon class="play-icon" src="assets/icon/video-play.svg " [svgStyle]="{ 'width.px':15} "></svg-icon>
+                        </div>
+                    </div>
+
+                    <div class="section-item-container">
+
+                        <div class="section-item-time">
+                            <p class="time-title">{{topic.topicDuration | minssecs}}</p>
+                        </div>
+                    </div>
+
+                    <!-- <div class="btn-container">
+
+                        <a type="submit" class="btn-danger" (click)="deleteOneTopic(topic.id)">Delete</a>
+                    </div> -->
+
+                </div>
+                <div class="divider"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <div *ngFor="let topic of topicsBySection$ | async">
+    {{topic.topicName}}
+</div> -->

@@ -1,0 +1,173 @@
+.pricing-container {
+    max-width: 300px;
+    // max-height: 600px;
+    background: white;
+    padding: 2px 16px;
+    box-shadow: rgba(24, 39, 75, 0.15) 0px 19px 80px, rgba(24, 39, 75, 0.15) 0px 10px 60px;
+    width: 100%;
+    border-radius: 28px;
+    margin: 2rem auto;
+}
+
+.header {
+    text-align: center;
+    // padding-top: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.display {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 1.5rem;
+}
+
+.display-pro {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.intro {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.bold {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.benifits {
+    display: flex;
+    justify-content: left;
+    padding-top: 1rem;
+    padding-left: 1.7rem;
+}
+
+.btn-pricing {
+    background: #000000;
+    border: 2px solid #1A1A1A;
+    color: white;
+    font-weight: 700;
+    padding: 12px 60px;
+    font-size: .7rem;
+    border-radius: .7rem;
+    box-shadow: rgba(16, 16, 16, 0.2) 0px 7px 29px 0px;
+}
+
+.btn-add-space {
+    margin-top: 6.9rem;
+}
+
+.btn-adjust {
+    padding-top: 1.8rem;
+    padding-bottom: 1rem;
+    // margin-top: 3rem;
+    text-align: center;
+}
+
+.month {
+    font-size: .7rem;
+    color: rgb(40, 40, 40);
+}
+
+.ptext {
+    padding-left: .8rem;
+    font-size: .7rem;
+    align-self: center;
+    color: rgb(34, 34, 34);
+}
+
+.benifits-pro {
+    display: flex;
+    justify-content: left;
+    padding-left: 1.7rem;
+}
+
+.ptext-pro {
+    padding-left: .8rem;
+    padding-top: .5rem;
+    font-size: .7rem;
+    align-items: center;
+}
+
+.check-icon {
+    padding-top: .4rem;
+}
+
+.check-icon-pro {
+    padding-top: .3rem;
+}
+
+.btn-pricing:disabled {
+    pointer-events: none;
+}
+
+.btn-pricing:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+.btn-pricing:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+// Dekstop layout
+.desktop-view-layout {
+    display: grid;
+    column-gap: .5rem;
+    grid-template-columns: 260px 1fr 1fr 1fr 1fr;
+    grid-template-rows: 150px 1fr 1fr 1fr 1fr;
+    grid-template-areas: "hslogo topbarArea topbarArea topbarArea topbarArea" "sidebar contentArea contentArea contentArea contentArea" "sidebar contentArea contentArea contentArea contentArea" "sidebar contentArea contentArea contentArea contentArea" "sidebar contentArea contentArea contentArea contentArea";
+    align-items: start;
+    width: 100vw;
+    height: 100vh;
+}
+
+.sidebar-a {
+    grid-area: sidebar;
+    align-self: start;
+    position: sticky;
+    top: 150px;
+    align-self: start;
+}
+
+.content-b {
+    grid-area: contentArea;
+}
+
+.hslogo-c {
+    grid-area: hslogo;
+    width: 180px;
+    margin: 2.6rem 0 0 3rem;
+}
+
+.topbar-d {
+    margin-top: 1rem;
+    grid-area: topbarArea;
+    align-self: start;
+    position: sticky;
+    top: 18px;
+    align-self: start;
+}
+
+.content-b {
+    grid-area: contentArea;
+}
+
+.promo-card {
+    grid-area: rightSidebar1;
+}
+
+.pricing-content {
+    display: flex;
+    // justify-content: space-around;
+    // padding: 2rem;
+}
+
+// Mobile view bar display none
+.topbar-h {
+    display: none;
+}

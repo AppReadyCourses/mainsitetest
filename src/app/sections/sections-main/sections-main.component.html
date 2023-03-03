@@ -1,0 +1,78 @@
+<div class="desktop-view-layout">
+    <app-navbar-main class="topbar-h">
+    </app-navbar-main>
+    <app-navbar-wide class="topbar-d">
+    </app-navbar-wide>
+    <div routerLink="/" class="stackmy-logo-c showwlogo">
+        <img src="assets/logo/appready-logo-b.png" alt="">
+    </div>
+
+    <div routerLink="/" class="stackmy-logo-c shwodlogo">
+        <img src="assets/logo/appready-logo-w.png" alt="">
+    </div>
+    <app-sidebar-menu-main class="sidebar-a"></app-sidebar-menu-main>
+
+
+    <div class="course-detail-container content-b">
+        <div class="course-head">
+            <div class="course-section-container">
+                <div>
+                    <h4 class="course-section-header">Sections</h4>
+                </div>
+
+                <div>
+                    <!-- <a type="submit" (click)="backClicked()">
+                        <img class="back-logo" src="assets/icon/left-arrow-circle-solid-72-grey.png" alt="" />
+                    </a> -->
+                    <a type="submit" class="btn" (click)="backClicked()">
+                       Back to course
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-bg">
+            <div class="section-items" *ngFor="let sections of sections$ | async">
+                <div class="section-item">
+                    <div class="section-header">
+                        <h4 class="section-title">{{sections.sectionName}}</h4>
+                        <div class="section-intro-container">
+                            <p class="section-intro">{{sections.sectionIntroduction}}</p>
+                        </div>
+                        <div class="extra-info">
+                            <div class="section-course-counts"><span class="text-700">8 </span>lessons</div>
+                            <div class="vl"></div>
+                            <div class="section-course-duration"><span class="text-700">75 </span> min</div>
+                        </div>
+                    </div>
+                    <div class="section-body">
+                        <div class="right-arrow-icon-container" [routerLink]="['/courses/sections/topics', sections.id]">
+                            <svg-icon class="arrow-icon" src="assets/icon/bx-chevron-right.svg " [svgStyle]="{ 'width.px':28} "></svg-icon>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="divider"></div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+<!-- <div *ngIf="sectionSelected$">
+    <div *ngFor="let sections of sectionSelected$ | async">
+        {{sections.sectionName}}
+    </div>
+</div> -->
+
+<!-- <div *ngIf="section$ | async as section">
+    {{section.sectionName}}
+</div> -->
+
+<div *ngFor="let section of sectionSelected$ | async ">
+    {{section.sectionName}} {{section.id}}
+</div>

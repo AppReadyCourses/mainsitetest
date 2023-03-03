@@ -1,0 +1,215 @@
+<div class="desktop-view-layout">
+    <app-navbar-main class="topbar-h"> </app-navbar-main>
+
+    <app-navbar-wide class="topbar-d"> </app-navbar-wide>
+
+    <div routerLink="/" class="stackmy-logo-c showwlogo">
+        <img src="assets/logo/stackmy-w.png" alt="">
+    </div>
+
+    <div routerLink="/" class="stackmy-logo-c shwodlogo">
+        <img src="assets/logo/stackmy.png" alt="">
+    </div>
+    <div class="sidebar-a">
+        <app-sidebar-menu-main> </app-sidebar-menu-main>
+    </div>
+
+    <div class="content-area">
+
+        <div id="videoContainer" #videoContainer>
+            <video #videoPlayer id="videoPlayer" width="100%" height="100%"></video>
+        </div>
+
+
+
+
+
+        <!-- <div class="comment-input">
+            <div>
+                <input type="text" placeholder="Add your comments here">
+                <button class="add-button" (click)="backClicked()">Back to topic</button>
+            </div>
+            <button class="add-button">Add</button>
+        </div> -->
+
+
+
+        <!-- Comment section  -->
+        <!-- <div class="comment-container ">
+
+            <div class="comment-display scroll-bar" id="style-1">
+
+                <div class="comment-display-items">
+                    <div class="comment-display-item">
+
+                        <div class="comment-display-info-container">
+                            <div class="comment-contents-info">
+                                <div class="comment-item-info">
+                                    <div class="comment-display-avatar-container">
+                                        <img class="user-image" src="assets/avatars/men1.png" alt="">
+                                    </div>
+                                    <div class="comment-display-username">Gin</div>
+                                </div>
+                                <div class="comment-display-days">
+                                    july 18, 2021
+                                </div>
+                            </div>
+                            <div class="comment-display-contents">
+                                <p>
+                                    Lorem . Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni corporis blanditiis cumque perspiciatis iure cum?
+                                </p>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                    </div>
+                    <div class="comment-display-item">
+                        <div class="comment-display-info-container">
+                            <div class="comment-contents-info">
+                                <div class="comment-item-info">
+                                    <div class="comment-display-avatar-container">
+                                        <img class="user-image" src="assets/avatars/men1.png" alt="">
+                                    </div>
+                                    <div class="comment-display-username">Gin</div>
+                                </div>
+                                <div class="comment-display-days">
+                                    july 18, 2021
+                                </div>
+                            </div>
+                            <div class="comment-display-contents">
+                                <p>
+                                    Lorem . Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione minus accusamus blanditiis! Qui magnam quaerat quae quasi fugiat nemo. Fuga.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                    </div>
+                    <div class="comment-display-item">
+
+                        <div class="comment-display-info-container">
+                            <div class="comment-contents-info">
+                                <div class="comment-item-info">
+                                    <div class="comment-display-avatar-container">
+                                        <img class="user-image" src="assets/avatars/men1.png" alt="">
+                                    </div>
+                                    <div class="comment-display-username">Gin</div>
+                                </div>
+                                <div class="comment-display-days">
+                                    july 18, 2021
+                                </div>
+                            </div>
+                            <div class="comment-display-contents">
+                                <p>
+                                    Lorem . Lorem ipsum dolor sit amet
+                                </p>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="comment-input">
+                <div>
+                    <input type="text" placeholder="Add your comments here">
+                    <button class="add-button">Add</button>
+                    <button class="add-button" (click)="backClicked()">Back to topic</button>
+                </div>
+            </div>
+ -->
+
+        <div *ngIf="topic$ | async as topic">
+
+
+            <!-- Comment section  -->
+
+            <div class="comment-title-tag">
+                <div>
+                    <h4 class="topic-intro">
+                        {{topic.topicName}}
+                    </h4>
+                </div>
+                <div class="questions-container">
+                    <p class="questions-text">Questions? Ask us!</p>
+                </div>
+            </div>
+
+
+            <!-- <div class="editor-btn-container">
+            <button class="editor-btn-w">Submit Question</button>
+            <button class="editor-btn-w" (click)="backClicked()">Back to topic</button>
+        </div> -->
+            <div class="logo-container-main">
+
+                <div class="logo-container">
+                    <img class="logo-img" src="/assets/icon/book-content-regular-72-w.png" alt=" " />
+                    <a class="btn-back">Section</a>
+                </div>
+                <div class="logo-container" (click)="backClicked()">
+                    <img class="logo-img" src="/assets/icon/detail-regular-72-w.png" alt=" " />
+                    <a class="btn-back">Back</a>
+                </div>
+                <div class="logo-container">
+                    <img class="logo-img" src="/assets/icon/book-content-regular-72-w.png" alt=" " />
+                    <a class="btn-back">Course</a>
+                </div>
+                <!-- <div class="logo-container btn-relation" (click)="updateStatusToggle(topic.id)">
+                    <img class="logo-img" src="/assets/icon/code-block-regular-72-w.png" alt=" " />
+                    <a class="btn-back">Updates</a>
+                    <span *ngIf="codeStatus" class="badge"></span>
+                </div>
+                <div class="logo-container " (click)="questionToggle()">
+                    <img class="logo-img " src="/assets/icon/message-add-regular-72-w.png" alt=" " />
+                    <a class="btn-back">Ask now</a>
+
+                </div>
+                <div class="logo-container">
+                    <img class="logo-img" src="/assets/icon/send-regular-72-w.png" alt=" " />
+                    <a class="btn-back">Send</a>
+                </div> -->
+            </div>
+
+
+
+            <!-- <div class="NgxEditor__Wrapper editer-adjust" *ngIf="questionStatus">
+                <ngx-editor-menu [editor]="editor"> </ngx-editor-menu>
+                <ngx-editor [editor]="editor" [ngModel]="html" [disabled]="false" [placeholder]="'We will be replying to you through Email shortely.'"></ngx-editor>
+            </div> -->
+
+
+
+            <!-- <div class="code-container" *ngIf="updatesStatus">
+                <pre><code [highlight]="topic.modification"></code></pre>
+            </div> -->
+        </div>
+
+    </div>
+
+</div>
+
+<!-- <div *ngIf="topic$ | async as topic">
+    {{topic.modification}}
+</div> -->
+
+<!-- <div class="modification-container" *ngIf="topic$ | async as topic">
+    <div [innerHtml]=topic.modification></div>
+</div> -->
+
+
+<!-- <pre><code class="language-css">body {
+      font: 100% Helvetica, sans-serif;
+      color: #333;
+    }
+
+    .box {
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      border-radius: 10px;
+    }
+
+</pre> -->
+
+<!-- <pre><code [highlight]="code"></code></pre> -->
+
+<!-- <div *ngIf="topic$ | async as topic">
+    {{topic.modification}}
+</div> -->

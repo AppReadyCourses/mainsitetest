@@ -1,0 +1,387 @@
+// * {
+//     background: rgb(121, 121, 121);
+// }
+// ------------------  Wide Screen ------------------
+.desktop-view-layout {
+    display: grid;
+    column-gap: .5rem;
+    grid-template-columns: 260px 1fr 1fr 1fr;
+    grid-template-rows: 120px 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "hslogo topbarArea topbarArea topbarArea " "sidebar content content content" "sidebar content content content" "sidebar content content content" "sidebar content content content" "sidebar content content content";
+    align-items: start;
+    width: 100vw;
+    height: 100vh;
+}
+
+.content-area {
+    margin: 1rem auto 0;
+    max-width: 580px;
+    max-height: 650px;
+    background: rgb(21, 21, 21);
+    border-radius: 15px 15px 7px 7px;
+    // padding: 10px 0;
+    box-shadow: rgba(24, 39, 75, 0.15) 0px 19px 80px, rgba(24, 39, 75, 0.15) 0px 10px 60px;
+    grid-area: content;
+}
+
+.sidebar-a {
+    grid-area: sidebar;
+    align-self: start;
+    position: sticky;
+    top: 150px;
+    align-self: start;
+    // display: none;
+}
+
+#my-video {
+    display: block;
+    // z-index: 150;
+    margin: 0 auto;
+}
+
+.video-e {
+    grid-area: contentArea;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.stackmy-logo-c {
+    grid-area: hslogo;
+    width: 180px;
+    margin: 2.6rem 0 0 3rem;
+}
+
+.topbar-d {
+    margin-top: 1rem;
+    grid-area: topbarArea;
+    align-self: start;
+    position: sticky;
+    top: 18px;
+    align-self: start;
+    z-index: 100;
+}
+
+.comment-f {
+    grid-area: commentArea;
+    margin: 0 auto;
+}
+
+#videoContainer {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#videoPlayer {
+    border-radius: 15px 15px 0 0;
+}
+
+//  ==================  Comment Section  ====================
+.comment-container {
+    margin: 0 auto;
+    // margin-top: 1rem;
+    max-width: 600px;
+    max-height: 500px;
+    padding: 6px 8px;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    // box-shadow: rgba(24, 39, 75, 0.077) 0px 19px 80px, rgba(24, 39, 75, 0.15) 0px 10px 60px;
+}
+
+// =========  Section Intro  ==========
+.divider {
+    content: '';
+    border-bottom: 1px solid rgb(232, 232, 232);
+    width: 500px;
+    margin: 1rem;
+}
+
+.comment-display-items:last-child>.divider {
+    // display: none;
+}
+
+// Comment section
+.comment-display {
+    max-width: 580px;
+    max-height: 500px;
+    // padding: 0 8px;
+    background: rgb(255, 255, 255);
+    border-radius: 14px;
+    // box-shadow: rgba(24, 39, 75, 0.057) 0px 19px 80px, rgba(24, 39, 75, 0.15) 0px 10px 60px;
+    margin: 0 auto;
+}
+
+.comment-display-avatar-container {
+    // margin-left: 1rem;
+    // align-self: center;
+    margin: .4rem .8rem 0 0;
+    // width: 25px;
+}
+
+.user-image {
+    max-width: 20px;
+}
+
+.comment-contents-info {
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+}
+
+.comment-item-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comment-display-info-container {
+    margin: 0 1rem;
+    // display: flex;
+    // flex-direction: column;
+}
+
+.comment-display-items {
+    // display: flex;
+    // flex-direction: column;
+    // max-height: 500px;
+}
+
+.comment-display-item {
+    margin: .5rem 0;
+    // display: flex;
+    // justify-content: space-between;
+}
+
+.comment-display-username {
+    font-size: .7rem;
+    font-weight: 700;
+}
+
+.comment-display-days {
+    font-size: .7rem;
+    color: rgb(155, 155, 155);
+    align-self: center;
+    // margin-left: 1rem;
+}
+
+.comment-display-contents>p {
+    font-size: .7rem;
+    max-width: 500px;
+    color: rgb(75, 75, 75);
+}
+
+// Button -----------------------------
+.comment-input {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+input[type=text] {
+    background: rgb(228, 228, 228);
+    width: 80%;
+    padding: 40px 40px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 15px;
+    border: none;
+}
+
+input[type=text]:focus {
+    outline: none;
+}
+
+.add-button {
+    margin: 0.3rem .5rem;
+    padding: 11px 14px;
+    font-weight: 700;
+    background: black;
+    color: white;
+    border-radius: 12px;
+    border: none;
+}
+
+// ------------------ Scroll bar
+.scroll-bar {
+    overflow-y: scroll;
+    max-height: 120px;
+}
+
+//  ----------------- scrollbar -----------------
+#style-1::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+#style-1::-webkit-scrollbar {
+    width: 3px;
+    background-color: #F5F5F5;
+}
+
+#style-1::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: rgb(155, 155, 155);
+}
+
+// Question and Title
+.comment-title-tag {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.topic-intro {
+    // margin: 1rem 1.6rem 0;
+    font-size: .6rem;
+    font-weight: 700;
+    margin: .5rem 1rem 0;
+    color: white;
+}
+
+.questions-text {
+    font-size: .6rem;
+    margin: .5rem 1rem 0;
+    font-weight: 700;
+    color: white;
+}
+
+.text-area-text-container {
+    text-align: center;
+}
+
+.editer-adjust {
+    max-height: 120px;
+    overflow-y: scroll;
+    margin: .5rem auto 0;
+}
+
+.editer-infos {
+    font-size: .6rem;
+    text-align: center;
+    // margin: .5rem auto 0;
+}
+
+.email {
+    color: rgb(172, 2, 2);
+    font-weight: 700;
+}
+
+.editor-btn-w {
+    margin: .8rem 1.5rem;
+    // width: 70%;
+    padding: 13px 25px;
+    font-weight: 700;
+    background: rgb(240, 240, 240);
+    color: rgb(0, 0, 0);
+    border-radius: 8px;
+    border: none;
+    box-shadow: rgba(24, 39, 75, 0.257) 0px 19px 80px, rgba(24, 39, 75, 0.25) 0px 10px 60px;
+}
+
+.editor-btn-b {
+    margin: .8rem 1.5rem;
+    // width: 70%;
+    padding: 13px 25px;
+    font-weight: 700;
+    background: rgb(57, 57, 57);
+    color: rgb(244, 244, 244);
+    border-radius: 8px;
+    border: none;
+    box-shadow: rgba(24, 39, 75, 0.357) 0px 19px 80px, rgba(24, 39, 75, 0.25) 0px 10px 60px;
+}
+
+.editor-btn-container {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+// Logo 
+.logo-img {
+    width: 22px;
+    margin: 0 auto;
+}
+
+.btn-back {
+    color: white;
+    font-size: .7rem;
+    margin-top: .2rem;
+    text-align: center;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 1rem 0.4rem;
+    width: 60px;
+}
+
+.logo-container-main {
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn-relation {
+    position: relative;
+}
+
+// Notification
+.badge {
+    position: absolute;
+    color: white;
+    top: -3px;
+    right: 16px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: red;
+    color: white;
+    text-align: center;
+}
+
+// Pre
+.code-container {
+    max-width: 580px;
+    max-height: 200px;
+    overflow-y: scroll;
+    // text-align: center;
+    margin: 0 auto;
+    border-radius: 0 0 7px 7px;
+}
+
+pre {
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 0;
+    word-wrap: break-word;
+    code {
+        flex: 1;
+        line-height: 1.5em;
+        font-size: 14px;
+        min-height: 100%;
+        padding: 1em 1.2em;
+        &.hljs-line-numbers {
+            padding: 0 !important;
+        }
+    }
+}
+
+//  ==================  Comment Section  ====================
+// Mobile view bar display none
+.topbar-h {
+    display: none;
+}
+
+// showwlogo
+.showwlogo {
+    display: var(--showw-logo-display);
+    visibility: var(--showw-logo-visibility);
+    transition: all 0.3s linear;
+}
+
+.shwodlogo {
+    display: var(--showb-logo-display);
+    visibility: var(--showb-logo-visibility);
+    transition: all 0.3s linear;
+}

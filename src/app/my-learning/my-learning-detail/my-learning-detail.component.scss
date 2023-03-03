@@ -1,0 +1,68 @@
+// * {
+//     background: rgb(121, 121, 121);
+// }
+// ------------------  Wide Screen ------------------
+.desktop-view-layout {
+    display: grid;
+    column-gap: .5rem;
+    grid-template-columns: 260px .5fr 1fr 1.5fr;
+    grid-template-rows: 150px 1fr 1fr;
+    grid-template-areas: "hslogo topbarArea topbarArea topbarArea " "contentArea contentArea contentArea controlPanel " "contentArea contentArea contentArea controlPanel  ";
+    align-items: start;
+    width: 100vw;
+    height: 100vh;
+}
+
+.sidebar-a {
+    // grid-area: sidebar;
+    // align-self: start;
+    // position: sticky;
+    // top: 150px;
+    // align-self: start;
+    display: none;
+}
+
+.left-section-container {
+    grid-area: contentArea;
+    max-width: 600px;
+    max-height: 750px;
+    // background: rgb(232, 232, 232);
+    // padding: 10px 10px;
+    // box-shadow: rgba(24, 39, 75, 0.15) 0px 19px 80px, rgba(24, 39, 75, 0.15) 0px 10px 60px;
+    margin: 0 auto;
+    border-radius: 18px;
+    align-items: center;
+}
+
+#my-video {
+    display: block;
+    // z-index: 150;
+    margin: 0 auto;
+}
+
+.hslogo-c {
+    grid-area: hslogo;
+    position: sticky;
+    top: 39px;
+    align-self: start;
+    width: 140px;
+    margin: 2.2rem 4.5rem;
+}
+
+.topbar-d {
+    margin-top: 1rem;
+    grid-area: topbarArea;
+    align-self: start;
+    position: sticky;
+    top: 18px;
+    align-self: start;
+}
+
+.right-section-container {
+    grid-area: controlPanel;
+}
+
+// Mobile view bar display none
+.topbar-h {
+    display: none;
+}

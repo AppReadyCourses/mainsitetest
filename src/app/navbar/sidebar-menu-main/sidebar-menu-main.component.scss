@@ -1,0 +1,130 @@
+// Side bar 
+.sidebar-container {
+    max-width: 260px;
+    max-height: 600px;
+    // background: white;
+    // padding: 2px 16px;
+    // box-shadow: rgba(24, 39, 75, 0.15) 0px 19px 80px, rgba(24, 39, 75, 0.15) 0px 10px 60px;
+    width: 100%;
+}
+
+.sidebar-item {
+    display: flex;
+    margin-top: .5rem;
+    // margin: 0 auto;
+    padding: 16px 3px;
+    color: black;
+    justify-content: left;
+    align-items: center;
+}
+
+.sidebar-item:hover {
+    border-radius: 0 16px 16px 0;
+    // background: red;
+    cursor: pointer;
+    color: white;
+    transform: scale(1.1); // transition: rgb(110, 7, 7) 2s ease-out;
+}
+
+.item-icon {
+    // padding-top: .2rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+// h4 {
+//     font-size: 1rem;
+//     color: var(--text-color);
+//     // padding: 16px 3px;
+// }
+.nav-menu-icon {
+    // fill: rgb(244, 244, 244);
+    fill: var(--svg-white);
+    margin-left: 2rem;
+    transition: all 0.3s linear;
+}
+
+@keyframes fadeIn {
+    0% {
+        white: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.first-item {
+    // margin-top: 5rem;
+}
+
+.sidebar-text {
+    margin-left: .5rem;
+    font-weight: 600;
+    font-size: .9rem;
+    color: var(--text-color);
+    transition: all 0.3s linear;
+}
+
+.sidebar-text:hover {
+    // transition: rgb(110, 7, 7) 2s ease-out;
+    color: white;
+}
+
+.active-color {
+    border-radius: 0 16px 16px 0;
+    // background-image: linear-gradient(195deg, #460105 10%, #090141 100%);
+    background-image: linear-gradient(82deg, rgb(64, 2, 180) 7%, rgb(94, 13, 169) 55%);
+    background-image: white;
+    box-shadow: rgba(162, 70, 236, 0.10) 0px 0px 16px, rgba(133, 15, 230, 0.15) 0px 0px 6px;
+}
+
+.active-svg {
+    fill: rgb(244, 244, 244);
+}
+
+.active-text {
+    color: rgb(244, 244, 244);
+    font-size: 1.1rem;
+}
+
+// side-navbar profile
+.profile-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 1rem;
+    // padding-right: 2rem;
+    margin-left: 2.6rem;
+}
+
+.profile-details {
+    // margin-right: 1rem;
+    margin-left: 1rem;
+    margin-bottom: .7rem;
+}
+
+.profile-username {
+    font-weight: 700;
+    font-size: .9rem;
+    color: rgb(55, 55, 55);
+}
+
+.navbar-img {
+    width: 30px;
+}
+
+.navbar-img-container {
+    // margin-right: 1.1rem;
+}
+
+.profile-jobtitle {
+    font-weight: 500;
+    font-size: .7rem;
+    color: gray;
+}
+
+.navbar-sign-logo-container {
+    // margin-left: 1.2rem;
+}

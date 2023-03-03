@@ -1,0 +1,155 @@
+<div class="desktop-view-layout">
+    <app-navbar-main class="topbar-h">
+    </app-navbar-main>
+
+    <app-navbar-wide class="topbar-d">
+    </app-navbar-wide>
+
+    <div routerLink="/" class="hslogo-c">
+        <img src="assets/logo/hslogo.png" alt="">
+    </div>
+
+    <div class="sidebar-a">
+        <app-sidebar-menu-main>
+        </app-sidebar-menu-main>
+    </div>
+
+    <app-my-free-courses-d class="sidebar-f">
+    </app-my-free-courses-d>
+
+    <app-my-paid-courses-d class="sidebar-g">
+    </app-my-paid-courses-d>
+
+
+    <div class="content-b">
+
+        <div class="welcome-subscribe-container">
+            <div class="welcome">
+                <div class="hello-left">
+                    <h3 class="welcome-msg">Hello, Jack!</h3>
+                    <h4 class="hello-info">
+                        You've got <br>3 courses in libray.
+                    </h4>
+                </div>
+                <div class="hello-right">
+                    <!-- <div class="subscription-card-container">
+                        <h5 class="subscription-card-title">My Subscription: Active</h5>
+                        <h6 class="next-p">Next Payment: <br/>Jan 19, 2022</h6>
+                        <div class="more-info-container">
+                            <div>
+                                <h6 class="product-more-info">More info</h6>
+                            </div>
+                            <div class="product-arrow-icon">
+                                <svg-icon src="assets/icon/bx-right-arrow-alt.svg" [svgStyle]="{ 'width.px':20}"></svg-icon>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <a [routerLink]="['/courses/details/1']">
+                        <div class="to-my-learning-container">
+                            <div class="to-my-learning-container-title">
+                                <h4 class="to-my-learning-container-title1">I'm ready,</h4>
+                                <h6 class="to-my-learning-container-title2">take me back to</h6>
+                                <h6 class="to-my-learning-container-title3">my learning.</h6>
+                            </div>
+
+                            <div class="to-my-learning-container-img">
+                                <img class="to-my-learning-img" src="/assets/icon/right-arrow-circle-regular-60.png" alt="">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="dashboard-container" id="search-bar">
+            <div class="search-bar-container">
+                <div class="svg-container">
+                    <svg-icon class="svg-icon" src="assets/icon/bx-search.svg" [svgStyle]="{ 'width.px':20}"></svg-icon>
+                </div>
+                <div class="search">
+                    <input class="search-bar-input" type="text" placeholder="Search my courses">
+                </div>
+
+            </div>
+        </div>
+
+        <div class="medium-screen-course-available-container">
+            <div class="medium-screen-course-head">
+                <h5 class="medium-screen-course-head-text">My Free Courses</h5>
+                <div class="medium-screen-free-container">
+                    <div class="medium-screen-free-container-list">
+                        <h6 class="medium-screen-title">Basic CRUD Training</h6>
+                        <p class="medium-screen-text">73%</p>
+                    </div>
+                    <div class="medium-divider" id="mydiv"></div>
+                    <div class="medium-screen-free-container-list">
+                        <h6 class="medium-screen-title">UI / UX Basics</h6>
+                        <p class="medium-screen-text">58%</p>
+                    </div>
+                </div>
+            </div>
+            <div class="medium-screen-course-head">
+                <h5 class="medium-screen-course-head-text">My Paid Courses</h5>
+                <div class="medium-screen-paid-container">
+                    <div class="medium-screen-paid-container-list">
+                        <h6 class="medium-screen-title">Real Estate Site</h6>
+                        <p class="medium-screen-text">24%</p>
+                    </div>
+                    <div class="medium-divider" id="mydiv"></div>
+                    <div class="medium-screen-paid-container-list">
+                        <h6 class="medium-screen-title">E-Commerce Site</h6>
+                        <p class="medium-screen-text">49%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard-container">
+            <h4 class="recently-text">Recently Viewed</h4>
+
+            <div class="course-card-container">
+                <div class="wide-screen-card-image-head">
+                    <img class="wide-screen-card-image" src="assets/productShots/gaming-site-banner.png" alt="">
+                </div>
+
+                <div class="course-all-info">
+
+                    <div class="course-level1">
+                        <div class="course-level1-left">
+                            <h5 class="my-course-header">Real Estate Service</h5>
+
+                            <p class="my-course-intros">
+                                Full stack focus on image display & online chat.
+                            </p>
+                        </div>
+                        <div class="course-level1-right">
+                            <a class="course-card-btn">
+                                <div class="btn-text">
+                                    Continue
+                                </div>
+                                <img class="red-arrow" src="assets/menuIcon/right-arrow-red.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="prgress-bar-main">
+                        <div class="progress-bar-status">
+                            <div class="completed-title">
+                                Progress
+                            </div>
+                            <div class="completed-title">
+                                30%
+                            </div>
+                        </div>
+                        <div class="progress-bar-all">
+                            <div class="progress-bar-complete">30%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

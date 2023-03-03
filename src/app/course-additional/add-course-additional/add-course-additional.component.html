@@ -1,0 +1,65 @@
+<a routerLink="/">
+    <img class="logo" src="assets/logo/hslogo.png" alt="" />
+</a>
+<div class="wrap">
+
+    <div class="container">
+        <h4>Add Course Property</h4>
+        <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+            <div class="form-group">
+                <input formControlName="coursePrice" name="coursePrice" placeholder="course Price" type="number" />
+            </div>
+            <div class="form-group">
+                <input formControlName="courseDuration" name="courseDuration" placeholder="course Duration" type="text" />
+            </div>
+            <div class="form-group">
+                <input formControlName="totalSections" name="totalSections" placeholder="total Sections" type="number" />
+            </div>
+            <div class="form-group">
+                <input formControlName="totalTopics" name="totalTopics" placeholder="total topics" type="number" />
+            </div>
+            <div class="form-group">
+                <input formControlName="skillsLearned1" name="skillsLearned1" placeholder="skills Learned 1" type="text" />
+            </div>
+            <div class="form-group">
+                <input formControlName="skillsLearned2" name="skillsLearned2" placeholder="skills Learned 2" type="text" />
+            </div>
+            <div class="form-group">
+                <input formControlName="skillsLearned3" name="skillsLearned3" placeholder="skills Learned 3" type="text" />
+            </div>
+            <div class="form-group">
+                <input formControlName="skillsLearned4" name="skillsLearned4" placeholder="skills Learned 4" type="text" />
+            </div>
+            <div class="form-group">
+                <input formControlName="toolsUsed1" name="toolsUsed1" placeholder="tools Used 1" type="text" />
+            </div>
+            <div class="form-group">
+                <input formControlName="toolsUsed2" name="toolsUsed2" placeholder="tools Used 2" type="text" />
+            </div>
+            <div class="form-group">
+                <input formControlName="toolsUsed3" name="toolsUsed3" placeholder="tools Used 3" type="text" />
+            </div>
+            <div class="form-group">
+                <input formControlName="toolsUsed4" name="toolsUsed4" placeholder="tools Used 4" type="text" />
+            </div>
+            <div class="form-group">
+                <input formControlName="toolsUsedImg1" name="toolsUsedImg1" placeholder="tools Used Img 1" type="text" />
+            </div>
+            <div class="form-group">
+                <input formControlName="toolsUsedImg2" name="toolsUsedImg2" placeholder="tools Used Img 2" type="text" />
+            </div>
+            <div class="form-group">
+                <input formControlName="toolsUsedImg3" name="toolsUsedImg3" placeholder="tools Used Img 3" type="text" />
+            </div>
+            <div class="form-group">
+                <input formControlName="toolsUsedImg4" name="toolsUsedImg4" placeholder="tools Used Img 4" type="text" />
+            </div>
+
+            <button type="submit" class="btn">
+                Submit
+            </button>
+        </form>
+
+
+    </div>
+</div>

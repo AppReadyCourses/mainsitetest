@@ -1,0 +1,140 @@
+// Dekstop layout
+.desktop-view-layout {
+    display: grid;
+    column-gap: .5rem;
+    grid-template-columns: 260px 1fr 1fr 1fr 1fr;
+    grid-template-rows: 150px 1fr 1fr 1fr 1fr;
+    grid-template-areas: "hslogo topbarArea topbarArea topbarArea topbarArea" "sidebar contentArea contentArea contentArea contentArea" "sidebar contentArea contentArea contentArea contentArea" "sidebar contentArea contentArea contentArea contentArea" "sidebar contentArea contentArea contentArea contentArea";
+    align-items: start;
+    width: 100vw;
+    height: 100vh;
+}
+
+.sidebar-a {
+    grid-area: sidebar;
+    align-self: start;
+    position: sticky;
+    top: 150px;
+    align-self: start;
+    z-index: 1000;
+}
+
+.stackmy-logo-c {
+    width: 180px;
+    margin: 2.6rem 0 0 3rem;
+}
+
+.topbar-d {
+    margin-top: 1rem;
+    grid-area: topbarArea;
+    align-self: start;
+    position: sticky;
+    top: 18px;
+    align-self: start;
+}
+
+.content-b {
+    grid-area: contentArea;
+}
+
+.promo-card {
+    grid-area: rightSidebar1;
+}
+
+// Payment Summary 
+.payment-container {
+    margin: 0 auto;
+}
+
+.payment-summary-header {
+    color: white;
+    margin: 0.4rem auto;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.payment-summary-container {
+    max-width: 700px;
+    max-height: 400px;
+    overflow-y: scroll;
+    background-image: linear-gradient(to right bottom, #f4f4f4, #e3e3e3);
+    padding: 2px 16px;
+    box-shadow: rgba(99, 49, 141, 0.05) 0px 19px 60px, rgba(99, 49, 141, 0.05) 0px 10px 40px;
+    width: 100%;
+    border-radius: 28px;
+    margin: .3rem auto;
+}
+
+.payment-info-container {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 1rem;
+    margin: 1rem;
+}
+
+.payment-divider {
+    content: '';
+    border-bottom: 1px solid rgb(199, 199, 199);
+    width: 620px;
+    margin: 0.7rem auto 0.7rem;
+}
+
+.payment-info-title {
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+.payment-info-price {
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+.payment-total-container {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-pricing {
+    background: #f0f0f0;
+    border: 2px solid #212121;
+    color: rgb(62, 62, 62);
+    font-weight: 600;
+    padding: 8px 40px;
+    font-size: .9rem;
+    border-radius: .7rem;
+    box-shadow: rgba(16, 16, 16, 0.2) 0px 7px 29px 0px;
+}
+
+.btn-adjust {
+    // padding-top: 1.8rem;
+    // padding-bottom: 1rem;
+    margin: .5rem auto;
+    text-align: center;
+}
+
+.payment-caution {
+    font-size: .8rem;
+    margin: 1rem;
+}
+
+.paypal-container {
+    text-align: center;
+}
+
+// showwlogo
+.showwlogo {
+    display: var(--showw-logo-display);
+    visibility: var(--showw-logo-visibility);
+    transition: all 0.3s linear;
+}
+
+.shwodlogo {
+    display: var(--showb-logo-display);
+    visibility: var(--showb-logo-visibility);
+    transition: all 0.3s linear;
+}

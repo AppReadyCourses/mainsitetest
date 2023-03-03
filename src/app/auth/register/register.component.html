@@ -1,0 +1,53 @@
+<a routerLink="/">
+    <img class="logo" src="assets/logo/hslogo.png" alt="" />
+</a>
+<div class="wrap">
+    <div class="register-container">
+        <h4>Sign Up</h4>
+        <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+            <div class="form-group">
+                <input formControlName="username" name="username" placeholder="Username" type="text" />
+            </div>
+            <div class="form-group">
+                <input formControlName="password" name="password" placeholder="Password" type="password" />
+            </div>
+            <div class="form-group">
+                <input formControlName="email" name="email" placeholder="Email" type="email" />
+            </div>
+
+            <select formControlName="interestedIn" class="dropdown-content">
+                <option disabled class="select-title">Select your interests</option>
+                <option >Select your interests</option>
+                <option *ngFor="let role of preSelectInterestesRole">{{role}}</option>
+            </select>
+
+            <p class="avatar-title">Available avatars:</p>
+            <div class="img-container">
+                <div *ngFor="let avatar of avatarImgArray; let i = index">
+                    <img class="img-avatar" src="{{avatar}}" alt="" />
+                    <p class="avatar-label">{{i+1}}</p>
+                </div>
+            </div>
+
+            <select formControlName="avatar" class="dropdown-content">
+                <option disabled >Select your avatar</option>
+                <option class="select-title">Select your avatar</option>
+                <option *ngFor="let a of avatarNames">
+                    Avatar {{a}}
+                </option>
+            </select>
+
+
+
+            <button class="btn">Submit</button>
+        </form>
+        <!-- <p class="forgot-password"> <a href="#">Forgot Your Password?</a> -->
+        <!-- <p class="login__signup">Don't have an account? &nbsp;<a>Sign up</a></p> -->
+    </div>
+
+    <div class="signup-adjust">
+        <p class="login__signup">
+            Already sign up? &nbsp;<a routerLink="/auth/signin">Sign In</a>
+        </p>
+    </div>
+</div>

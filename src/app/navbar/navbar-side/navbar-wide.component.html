@@ -1,0 +1,136 @@
+<div class="navbar-wide-container">
+    <div class="left">
+
+
+        <!-- <div class="search-bar-container">
+            <div class="svg-container">
+                <svg-icon class="svg-icon-search" src="assets/icon/bx-search.svg" [svgStyle]="{ 'width.px':20}"></svg-icon>
+            </div>
+            <div class="search">
+                <input class="search-bar-input" type="text" placeholder="Search">
+            </div>
+
+        </div> -->
+
+        <div class="icon-lists">
+            <div class="icon-item" routerLink="/">
+                <svg-icon class="navbar-icon" src="assets/icon/bx-home-b.svg" [svgStyle]="{ 'width.px':42 }"></svg-icon>
+            </div>
+            <!-- <div class="icon-item">
+                <svg-icon class="navbar-icon" src="assets/icon/bx-book-content.svg" [svgStyle]="{ 'width.px':42 }"></svg-icon>
+            </div> -->
+            <div class="icon-item" (click)="showCart()">
+                <svg-icon class="navbar-icon" src="assets/menuIcon/bx-cart-alt.svg" [svgStyle]="{ 'width.px':42 }"></svg-icon>
+            </div>
+
+            <div class="vl"></div>
+            <a class="icon-item" *ngIf="logInCondition" (click)="signin()">
+                <svg-icon class="navbar-icon" src="assets/icon/bx-log-in.svg" [svgStyle]="{ 'width.px':42 }"></svg-icon>
+            </a>
+            <a class="icon-item" *ngIf="logOutCondition">
+                <svg-icon class="navbar-icon" (click)="logout()"   src="assets/icon/bx-log-out.svg" [svgStyle]="{ 'width.px':42 }"></svg-icon>
+            </a>
+        </div>
+
+
+    </div>
+
+
+    <div class="right">
+        <div>
+            <input id="darkMode" type="checkbox" [checked]="darkMode$ | async" (change)="onToggle()" class="toggle" />
+            <label class="toggle-label" for="darkMode">
+                <div >
+                    <svg-icon class="moon"  src="assets/icon/bxs-sun.svg" [svgStyle]="{ 'width.px':45, 'margin-top.px':12 }"></svg-icon>
+                    
+                    <svg-icon class="sun orig-moon"  src="assets/icon/bx-moon.svg" [svgStyle]="{ 'width.px':45, 'margin-top.px':12 }"></svg-icon>
+                    
+                </div>
+        
+            </label>
+        </div>
+        <div class="vl-dark-mode"></div>
+        <div class="user-profile">
+            <div class="profile-logo">
+                <img class="user-image" [src]="avatar" alt="">
+            </div>
+            <div class="user-infos">
+                <div class="text-title">
+                    <h4 class="user-title">{{username | titlecase }}</h4>
+                </div>
+                <div>
+                    <p class="user-work">{{interestedIn }}</p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+<div *ngIf="showModal">
+    <div class="cookiesContent" id="cookiesPopup">
+        <button (click)="modalClose()" class="close">✖</button>
+        <img src="assets/img/bermuda-success.png" class="cookies-img" />
+        <p>Are you sure you would like to sign out of your Stackmy account?</p>
+        <button (click)="modalLogOut()" class="accept">Sign Out</button>
+    </div>
+</div>
+
+<div *ngIf="showCartModal">
+    <div class="cookiesContent2">
+
+        <div class="cart-info">
+            <div>
+                <h4 class="my-cart">My cart</h4>
+            </div>
+            <div>
+                <button (click)="cartModalClose()" class="cart-close">✖</button>
+            </div>
+
+        </div>
+
+        <div *ngIf="totalPrice > 0">
+
+            <div class="item-container">
+                <div class="div-container" *ngFor="let course of cartItems ">
+                    <div class="item-info-box">
+                        <div class="cart-title">
+                            {{course.courseName}}
+                        </div>
+                        <div class="cart-title-price" *ngIf="course.coursePrice">
+                            {{course.coursePrice | currency: 'USD'}}
+                        </div>
+                        <div class="navbar-trash" (click)="deleteItemFromCart(course.id, course)">
+                            <img src="assets/icon/trash-regular-72-gray.png" class="trash-img" />
+                        </div>
+                    </div>
+
+
+                    <div class="divider"></div>
+                </div>
+            </div>
+
+            <div class="total">
+                <div class="total-amount">
+                    <h5>Total: </h5>
+                </div>
+                <div class="total-price">
+                    <h5>{{totalPrice | currency: 'USD'}}</h5>
+                </div>
+            </div>
+
+            <div class="btn-adjust" routerLink="/cart" (click)="goToCart()">
+                <button class="btn-pricing">
+                    View my cart
+                </button>
+            </div>
+        </div>
+
+
+        <div *ngIf="totalPrice === 0">
+            <h5>No item in cart</h5>
+        </div>
+    </div>
+</div>

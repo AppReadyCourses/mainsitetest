@@ -1,0 +1,452 @@
+    .dashboard-container {
+        max-width: 380px;
+        // border-radius: 18px;
+        margin: 2rem auto;
+    }
+    
+    // ---------------- Ready button Start -----------------
+    a {
+        text-decoration: none;
+    }
+    
+    a:visited {
+        text-decoration: none;
+        color: black;
+    }
+    
+    .to-my-learning-container {
+        max-width: 230px;
+        // max-height: 600px;
+        background: white;
+        padding: 15px 22px;
+        box-shadow: rgba(24, 39, 75, 0.15) 0px 19px 80px, rgba(24, 39, 75, 0.15) 0px 10px 60px;
+        width: 100%;
+        border-radius: 18px;
+        margin: 2rem auto;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        outline: 3px solid rgb(255, 17, 0)
+    }
+    
+    .to-my-learning-container:hover {
+        cursor: pointer;
+    }
+    
+    .to-my-learning-container-img {
+        margin-left: 1.5rem;
+        margin-top: .4rem;
+    }
+    
+    .to-my-learning-img {
+        width: 25px;
+        justify-content: space-between;
+    }
+    
+    .to-my-learning-container-title1 {
+        font-size: .8rem;
+        margin-bottom: .1rem;
+    }
+    
+    .to-my-learning-container-title2 {
+        color: gray;
+        font-weight: 500;
+        line-height: 15px;
+    }
+    
+    .to-my-learning-container-title3 {
+        color: red;
+        font-weight: 500;
+    }
+    
+    // ---------------- Ready button End -----------------
+    .welcome-msg {
+        font-size: 1.2rem;
+        color: rgb(135, 134, 134);
+        font-weight: 500;
+    }
+    
+    .hl-name {
+        font-size: 1.4rem;
+        color: rgb(72, 72, 72);
+    }
+    
+    .hello-info {
+        font-size: 1rem;
+    }
+    
+    .hello-left {
+        align-self: center;
+    }
+    
+    .product-arrow-icon {
+        padding-top: .3rem;
+        padding-left: .4rem;
+    }
+    
+    .product-more-info {
+        color: black;
+    }
+    
+    .recently-text {
+        margin-bottom: .6rem;
+    }
+    
+    .search {
+        margin-left: .8rem;
+    }
+    
+    .search-bar-container {
+        // padding: 6px;
+        // border: none;
+        font-size: .8rem;
+        border-radius: 15px;
+        padding: 7px 20px;
+        width: 80%;
+        // height: 2.8rem;
+        // line-height: 1rem;
+        background: white;
+        box-shadow: rgba(24, 39, 75, 0.077) 0px 19px 80px, rgba(24, 39, 75, 0.15) 0px 10px 60px;
+        display: flex;
+        justify-content: left;
+        margin: 0 auto;
+    }
+    
+    .search-bar-input {
+        border-width: 0px;
+        outline: 0;
+        border: none;
+        margin-top: .4rem;
+        width: 220px;
+        -webkit-appearance: none
+    }
+    
+    .svg-container {
+        margin-top: .2rem;
+    }
+    
+    .svg-icon {}
+    
+    // .display-two {
+    //     display: flex;
+    //     justify-content: left;
+    //     flex-wrap: wrap;
+    // }
+    // .display-two>div {
+    //     flex: 0 50%
+    // }
+    .course-card-container {
+        max-width: 380px;
+        // max-height: 600px;
+        background: white;
+        padding: 10px 11px;
+        box-shadow: rgba(24, 39, 75, 0.15) 0px 19px 80px, rgba(24, 39, 75, 0.15) 0px 10px 60px;
+        width: 100%;
+        border-radius: 18px;
+        display: inline-block;
+        margin: .2rem;
+        // align-items: center;
+    }
+    
+    .wide-screen-card-image-head {}
+    
+    .wide-screen-card-image {
+        border-radius: 18px 18px 0 0;
+        max-width: 380px;
+        margin: -10px 0 0 -11px;
+    }
+    
+    .course-image {
+        border-radius: 15px;
+        margin-top: .2rem;
+    }
+    
+    .my-course-header {
+        font-size: 1rem;
+    }
+    
+    .course-icon-main {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+    
+    .course-arrow-icon {
+        margin-top: .4rem;
+        margin-left: .5rem;
+    }
+    
+    // all infos
+    .course-all-info {
+        margin-left: .5rem;
+    }
+    
+    // Porgress Bar
+    .progress-bar-all {
+        width: 100%;
+        border-radius: 2px;
+        background-color: rgba(99, 99, 99, 0.336);
+    }
+    
+    .progress-bar-complete {
+        background-color: rgba(62, 62, 62, 0.384);
+        color: white;
+        padding: 2px;
+        text-align: right;
+        font-size: 1px;
+        border-radius: 2px;
+        width: 30%;
+    }
+    
+    // ------------------  Wide Screen ------------------
+    .desktop-view-layout {
+        display: grid;
+        column-gap: .5rem;
+        grid-template-columns: 260px 1fr 1fr 1fr 1fr;
+        grid-template-rows: 150px 1fr 1fr;
+        grid-template-areas: "hslogo topbarArea topbarArea topbarArea topbarArea" "sidebar contentArea contentArea rightSidebar1 rightSidebar1" "sidebar contentArea contentArea rightSidebar2 rightSidebar2";
+        align-items: start;
+        width: 100vw;
+        height: 100vh;
+    }
+    
+    .sidebar-a {
+        grid-area: sidebar;
+        align-self: start;
+        position: sticky;
+        top: 150px;
+        align-self: start;
+    }
+    
+    .content-b {
+        grid-area: contentArea;
+    }
+    
+    .hslogo-c {
+        grid-area: hslogo;
+        position: sticky;
+        top: 39px;
+        align-self: start;
+        width: 140px;
+        margin: 2.2rem 4.5rem;
+    }
+    
+    .topbar-d {
+        margin-top: 1rem;
+        grid-area: topbarArea;
+        align-self: start;
+        position: sticky;
+        top: 18px;
+        align-self: start;
+    }
+    
+    .sidebar-f {
+        grid-area: rightSidebar1;
+    }
+    
+    .sidebar-g {
+        grid-area: rightSidebar2;
+    }
+    
+    .welcome-subscribe-container {
+        max-width: 480px;
+        // border-radius: 18px;
+        margin: 0 auto;
+    }
+    
+    .welcome {
+        display: flex;
+        padding: 0 .5rem;
+        justify-content: space-around;
+    }
+    
+    .progress-bar-status {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: .2rem;
+    }
+    
+    .completed-title {
+        font-size: .7rem;
+        color: gray;
+        font-weight: 700;
+    }
+    
+    .prgress-bar-main {
+        margin: .5rem auto;
+    }
+    
+    .my-course-intros {
+        font-size: .8rem;
+        width: 70%;
+        color: rgb(135, 135, 135);
+    }
+    
+    .course-card-btn {
+        border: 1px solid rgb(28, 28, 28);
+        background-color: #000000;
+        color: white;
+        font-weight: 700;
+        padding: 13px 7px;
+        font-size: .8rem;
+        cursor: pointer;
+        border-radius: 8px;
+        display: flex;
+        // box-shadow: black;
+        width: 100px;
+    }
+    
+    .course-level1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .btn-text {
+        margin-right: .5rem;
+    }
+    
+    .red-arrow {
+        width: 12px;
+    }
+    
+    .right-arrow {
+        fill: red;
+        width: 20px;
+    }
+    
+    // Mobile view bar display none
+    .topbar-h {
+        display: none;
+    }
+    
+    .medium-screen-course-available-container {
+        display: none;
+    }
+    
+    // ----------------  Bigger Scrren 1150px ------------------
+    @media only screen and (min-width: 1150px) {
+        .desktop-view-layout {
+            column-gap: .5rem;
+        }
+        .welcome-msg {
+            font-size: 1.5rem;
+        }
+        .hello-info {
+            font-size: 1.1rem;
+        }
+        .subscription-card-container {
+            max-width: 270px;
+            // margin: 0 auto;
+            padding: 1rem 2rem;
+        }
+        .welcome {
+            display: flex;
+            // padding: 0 .3rem;
+            justify-content: space-between;
+        }
+        .hello-left {
+            display: initial;
+        }
+        .more-info-container {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            // margin-bottom: -1rem;
+            // margin-top: -.5rem;
+            cursor: pointer;
+        }
+        .subscription-card-title {
+            font-size: .8rem;
+        }
+        .next-p {
+            font-size: .8rem;
+        }
+        .product-more-info {
+            font-size: .8rem;
+        }
+        .more-info-container {
+            margin-top: .2rem;
+        }
+        .medium-screen-course-available-container {
+            display: none;
+        }
+    }
+    
+    @media only screen and (max-width: 1033px) {
+        #search-bar {
+            display: none;
+        }
+        .sidebar-f {
+            display: none;
+        }
+        .sidebar-g {
+            display: none;
+        }
+        .desktop-view-layout {
+            grid-template-areas: "hslogo topbarArea topbarArea topbarArea topbarArea" "sidebar contentArea contentArea contentArea contentArea" "sidebar contentArea contentArea contentArea contentArea";
+        }
+        .topbar-h {
+            display: none;
+        }
+        // Medium Screen Container
+        .medium-screen-course-available-container {
+            max-width: 400px;
+            // max-height: 600px;
+            background: white;
+            padding: 10px 11px;
+            box-shadow: rgba(24, 39, 75, 0.15) 0px 19px 80px, rgba(24, 39, 75, 0.15) 0px 10px 60px;
+            width: 100%;
+            border-radius: 18px;
+            margin: .5rem auto;
+            align-items: center;
+            display: flex;
+            justify-content: space-around;
+        }
+        .medium-screen-free-container-list {
+            display: flex;
+            justify-content: space-between;
+        }
+        .medium-divider {
+            content: "";
+            top: 0;
+            width: 100%;
+            margin: .3rem auto;
+            border: 1px solid rgb(228, 228, 228);
+        }
+        .medium-screen-paid-container-list {
+            display: flex;
+            justify-content: space-between;
+        }
+        .medium-screen-text {
+            font-size: .7rem;
+            margin-left: 1rem;
+        }
+        .medium-screen-course-head-text {
+            margin-bottom: .5rem;
+        }
+    }
+    
+    @media only screen and (max-width: 670px) {
+        .sidebar-a {
+            display: none;
+        }
+        .hslogo-c {
+            display: none;
+        }
+        .topbar-d {
+            display: none;
+        }
+        .topbar-h {
+            display: contents;
+        }
+        .desktop-view-layout {
+            display: flex;
+            flex-direction: column;
+            // justify-content: center;
+            align-items: center;
+        }
+        .welcome-subscribe-container {
+            margin-top: 1rem;
+        }
+    }

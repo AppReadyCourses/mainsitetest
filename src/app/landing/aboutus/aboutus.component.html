@@ -1,0 +1,46 @@
+
+<div class="logo-view-container">
+    <div class="logo-container">
+        <div routerLink="/" class="stackmy-logo-c showwlogo">
+            <img src="assets/logo/appready-white-logo.png" alt="">
+        </div>
+
+        <div routerLink="/" class="stackmy-logo-c shwodlogo">
+            <img src="assets/logo/appready-dark-logo.png" alt="">
+        </div>
+    </div>
+
+    <div class="night-view">
+        <input id="darkMode" type="checkbox" [checked]="darkMode$ | async" (change)="onToggle()" class="toggle" />
+            <label class="toggle-label" for="darkMode">
+                <div >
+                    <svg-icon class="moon"  src="assets/icon/bxs-sun.svg" [svgStyle]="{ 'width.px':45, 'margin-top.px':12 }"></svg-icon>
+                    
+                    <svg-icon class="sun orig-moon"  src="assets/icon/bx-moon.svg" [svgStyle]="{ 'width.px':45, 'margin-top.px':12 }"></svg-icon>
+                    
+                </div>
+                
+            </label>
+    </div>
+
+</div>
+
+
+
+<div class="head-line">
+    <h2 >About Us</h2>
+</div>
+
+    <div class="text-c">
+
+    <p >Hi. Welcome to AppReady courses.
+        <br>
+        You can learn how to build a website with all the newest technology from the industry. 
+        <br>
+        We focus on HTML5, CSS3, Javascript, web framework(including React, Angular and Vue), UI/UX design, and more.
+        <br>
+        We also focus more on building full stack website, which includes frontend to backend, database in just one
+        course, so you don't have to purchase multiple courses just to build only one website.</p>
+        <br>
+        You can visit us at 
+    </div>

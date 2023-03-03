@@ -1,0 +1,75 @@
+// ------------------  Wide Screen ------------------
+.desktop-view-layout {
+    display: grid;
+    column-gap: .5rem;
+    grid-template-columns: 260px 1fr 1fr 1fr;
+    grid-template-rows: 120px 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "hslogo topbarArea topbarArea topbarArea " "sidebar content content content" "sidebar content content content" "sidebar content content content" "sidebar content content content" "sidebar content content content";
+    align-items: start;
+    width: 100vw;
+    height: 100vh;
+}
+
+.content-area {
+    // margin: 1rem auto 0;
+    // max-width: 580px;
+    // max-height: 650px;
+    // background: rgb(21, 21, 21);
+    // border-radius: 15px 15px 7px 7px;
+    // padding: 10px 0;
+    // box-shadow: rgba(24, 39, 75, 0.15) 0px 19px 80px, rgba(24, 39, 75, 0.15) 0px 10px 60px;
+    grid-area: content;
+    // border-radius: 30px;
+}
+
+.sidebar-a {
+    grid-area: sidebar;
+    align-self: start;
+    position: sticky;
+    top: 150px;
+    align-self: start;
+    // display: none;
+}
+
+.stackmy-logo-c {
+    grid-area: hslogo;
+    width: 180px;
+    margin: 2.6rem 0 0 3rem;
+}
+
+.topbar-d {
+    margin-top: 1rem;
+    grid-area: topbarArea;
+    align-self: start;
+    position: sticky;
+    top: 18px;
+    align-self: start;
+    z-index: 100;
+}
+
+.topbar-h {
+    display: none;
+}
+
+// showwlogo
+.showwlogo {
+    display: var(--showw-logo-display);
+    visibility: var(--showw-logo-visibility);
+    transition: all 0.3s linear;
+}
+
+.shwodlogo {
+    display: var(--showb-logo-display);
+    visibility: var(--showb-logo-visibility);
+    transition: all 0.3s linear;
+}
+
+// VM
+// vm-player {
+//     // --vm-control-scale: 1.75;
+//     width: 500px;
+//     margin: auto;
+// }
+vm-player {
+    --vm-player-theme: #de4269;
+}

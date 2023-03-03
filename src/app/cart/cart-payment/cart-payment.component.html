@@ -1,0 +1,68 @@
+<div class="desktop-view-layout">
+    <app-navbar-wide class="topbar-d">
+    </app-navbar-wide>
+
+
+    <div routerLink="/" class="stackmy-logo-c showwlogo">
+        <img src="assets/logo/appready-logo-b.png" alt="">
+    </div>
+
+    <div routerLink="/" class="stackmy-logo-c shwodlogo">
+        <img src="assets/logo/appready-logo-w.png" alt="">
+    </div>
+
+    <div class="sidebar-a">
+        <app-sidebar-menu-main>
+        </app-sidebar-menu-main>
+    </div>
+
+
+
+    <div class="payment-container content-b">
+
+        <div class="payment-summary-header">
+            Order Summary
+        </div>
+
+
+        <div class="payment-summary-container" *ngIf="cartItems.length !== 0">
+            <div *ngFor="let course of cartItems$ | async; let i = index">
+
+                <div class="payment-info-container">
+                    <div class="payment-info-title">
+                        {{i + 1}}. {{course.courseName}}
+                    </div>
+
+                    <div class="payment-info-price">
+                        {{course.coursePrice | currency: 'USD'}}
+                    </div>
+                </div>
+
+            </div>
+            <div class="payment-divider"></div>
+            <div class="payment-total-container">
+                <div>Total: </div>
+                <div>
+                    {{totalPrice | currency: 'USD'}}
+                </div>
+            </div>
+
+            <div class="payment-divider"></div>
+            <div class="payment-caution">
+                1. Currently we only accept PayPal payments, if you don’t have PayPal account, you can register at www.paypal.com. <br> 2. Once the transaction is completed, you can view the course you purchased in “My learning” section. <br> 3. If there's
+                any issues before/after purchase, you can contact us at stackmy@gmail.com, please include a screen shot of your PayPal payment history.
+            </div>
+            <div class="btn-adjust">
+                <button class="btn-pricing" (click)="cancelOrder()">
+                            Cancel
+                        </button>
+            </div>
+        </div>
+
+        <div class="paypal-container">
+            <div #paypal></div>
+        </div>
+    </div>
+</div>
+
+<button (click)="clicked()">click</button>

@@ -1,0 +1,106 @@
+.desktop-view-layout {
+    display: grid;
+    column-gap: .5rem;
+    grid-template-columns: 260px 1fr 1fr 1fr 1fr;
+    grid-template-rows: 150px 1fr 1fr 1fr 1fr;
+    grid-template-areas: "hslogo topbarArea topbarArea topbarArea topbarArea" "sidebar contentArea contentArea contentArea contentArea" "sidebar contentArea contentArea contentArea contentArea" "sidebar contentArea contentArea contentArea contentArea" "sidebar contentArea contentArea contentArea contentArea";
+    align-items: start;
+    width: 100vw;
+    height: 100vh;
+}
+
+.stackmy-logo-c {
+    width: 180px;
+    margin: 3.5rem 0 0 3rem;
+}
+
+.sidebar-a {
+    grid-area: sidebar;
+    align-self: start;
+    position: sticky;
+    top: 150px;
+    align-self: start;
+}
+
+.content-b {}
+
+.hslogo-c {
+    grid-area: hslogo;
+    width: 180px;
+    margin: 2.6rem 0 0 3rem;
+}
+
+.topbar-d {
+    margin-top: 1rem;
+    grid-area: topbarArea;
+    align-self: start;
+    position: sticky;
+    top: 18px;
+    align-self: start;
+}
+
+.content-b {
+    grid-area: contentArea;
+}
+
+.promo-card {
+    grid-area: rightSidebar1;
+}
+
+// faq container
+.faq-container {
+    width: 600px;
+    // text-align: center;
+    // color: rgb(240, 239, 239);
+    margin: 0 auto;
+    grid-area: contentArea;
+}
+
+.question-items-container {}
+
+.question-icon {
+    fill: var(--text-color)
+}
+
+.question-item {
+    // display: flex;
+    // justify-content: space-around;
+    // align-items: center;
+    margin: 1.5rem auto;
+}
+
+.faq-question {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-top: .5rem;
+}
+
+.faq-answer {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--help-bodt-text);
+    // padding: 1rem auto;
+    text-align: left;
+    width: 540px;
+    line-height: 1.7em;
+}
+
+.question-a-container {
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+}
+
+// showwlogo
+.showwlogo {
+    display: var(--showw-logo-display);
+    visibility: var(--showw-logo-visibility);
+    transition: all 0.3s linear;
+}
+
+.shwodlogo {
+    display: var(--showb-logo-display);
+    visibility: var(--showb-logo-visibility);
+    transition: all 0.3s linear;
+}

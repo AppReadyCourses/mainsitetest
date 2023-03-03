@@ -1,0 +1,30 @@
+<div class="desktop-view-layout">
+    <app-navbar-main class="topbar-h">
+    </app-navbar-main>
+
+    <app-navbar-wide class="topbar-d">
+    </app-navbar-wide>
+
+    <div class="hslogo-c" routerLink="/">
+        <img src="assets/logo/hslogo.png" alt="">
+    </div>
+
+    <div class="sidebar-a">
+        <app-sidebar-menu-main>
+        </app-sidebar-menu-main>
+    </div>
+
+
+    <div class="left-section-container">
+        <!-- <app-content-detail></app-content-detail> -->
+        <router-outlet></router-outlet>
+
+        <app-comment-main></app-comment-main>
+    </div>
+
+
+    <div class="right-section-container">
+        <app-section-control-panel></app-section-control-panel>
+
+    </div>
+</div>

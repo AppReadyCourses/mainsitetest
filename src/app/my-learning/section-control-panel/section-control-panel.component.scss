@@ -1,0 +1,296 @@
+.control-panel-container {
+    max-width: 350px;
+    // max-height: 600px;
+    background: rgb(249, 249, 249);
+    padding: 15px 0px;
+    box-shadow: rgba(24, 39, 75, 0.15) 0px 19px 80px, rgba(24, 39, 75, 0.15) 0px 10px 60px;
+    width: 100%;
+    border-radius: 18px;
+    margin: 0 auto;
+}
+
+// section hehder
+.section-items-container {
+    // overflow-y: scroll;
+    // max-height: 390px;
+    background: rgb(249, 249, 249);
+    border-radius: 18px;
+}
+
+.section-title-header {
+    font-size: .8rem;
+    color: rgb(24, 24, 24);
+    font-weight: 700;
+}
+
+.section-top-header {
+    text-align: center;
+    color: rgb(19, 19, 19);
+    margin-bottom: .5rem;
+}
+
+.section-container {
+    background: rgb(225, 225, 225);
+    // background: rgb(45, 45, 45);
+    padding: .7rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // margin-top: .5rem;
+    cursor: pointer;
+}
+
+.section-title-infos-container {
+    display: flex;
+}
+
+.arrow-logo-img {
+    width: 20px;
+}
+
+.section-title-infos-text {
+    margin-right: .5rem;
+    font-size: .7rem;
+    color: rgb(113, 113, 113);
+    // color: rgb(208, 208, 208);
+}
+
+.section-title-arrow {}
+
+//  ---------Scroll - Bar div
+.scroll-bar {
+    overflow-y: scroll;
+    max-height: 520px;
+}
+
+//  ----------------- scrollbar -----------------
+#style-1::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+#style-1::-webkit-scrollbar {
+    width: 6px;
+    background-color: #F5F5F5;
+}
+
+#style-1::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #555;
+}
+
+// Input check-box
+// .input-checkbox {
+//     margin: 0 2rem;
+// }
+// .section-input-label {
+//     margin-right: .5rem;
+// }
+// .play-logo-img {
+//     width: 18px;
+// }
+// ----------- form control -----------
+.form-control {
+    font-weight: 700;
+    line-height: 1.1;
+    display: grid;
+    grid-template-columns: 1em auto;
+    gap: 0.5em;
+}
+
+input[type="checkbox"] {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    /* Remove most all native input styles */
+    appearance: none;
+    /* For iOS < 15 */
+    background-color: var(--form-background);
+    /* Not removed via appearance */
+    margin: 0;
+    font: inherit;
+    color: rgb(9, 9, 9);
+    width: 0.95em;
+    height: 0.95em;
+    border: 0.15em solid currentColor;
+    border-radius: 0.25em;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    width: 0.55em;
+    height: 0.55em;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+    transform: scale(0);
+    transform-origin: bottom left;
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em rgb(12, 12, 12);
+    /* Windows High Contrast Mode */
+    background-color: CanvasText;
+}
+
+input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+// ----------- form control -----------
+// Section - item
+.section-input {
+    // margin-top: .2rem;
+}
+
+.section-item-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-left: 1.8rem;
+    // margin-top: -.1rem;
+}
+
+.form-section-title {
+    font-weight: 500;
+    font-size: .8rem;
+    margin-left: .5rem;
+}
+
+.play-logo-container {
+    // margin: 0 auto;
+}
+
+.play-logo-img {
+    // height: 12px;
+    max-width: 16px;
+    // padding-top: .5rem;
+    // margin-top: .3rem;
+    // left: 7px;
+    // right: 7px;
+}
+
+.section-item-time {
+    margin-left: .5rem;
+}
+
+.time-title {
+    font-size: .75rem;
+    color: rgb(136, 136, 136);
+}
+
+// ----------- form control -----------
+.section-single-item {
+    margin: 1rem 2rem;
+    align-items: center;
+}
+
+// Bottom -butons
+.btn-text {}
+
+.left-arrow {
+    width: 11px;
+    padding-right: .2rem;
+}
+
+.right-arrow {
+    width: 11px;
+    padding-left: .2rem;
+}
+
+.home-arrow {
+    padding-top: .2rem;
+    width: 13px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: .6rem;
+}
+
+#inner-shadow {
+    -moz-box-shadow: inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow: inset 0 0 10px #000000;
+}
+
+// Button 
+.section-btn {
+    border: 1px solid rgb(28, 28, 28);
+    background-color: #000000;
+    color: white;
+    font-weight: 500;
+    padding: 5px 17px;
+    font-size: .6rem;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // box-shadow: black;
+}
+
+.section-home-btn {
+    border: 1px solid rgb(28, 28, 28);
+    background-color: #000000;
+    color: white;
+    font-weight: 500;
+    padding: 2px 10px;
+    font-size: .6rem;
+    border-radius: 10px;
+}
+
+// go back btn
+.play-logo-img {
+    width: 20px;
+    margin: .3rem auto;
+    display: block;
+}
+
+.go-back-btn {}
+
+.btn-back {
+    border: 1px solid rgb(28, 28, 28);
+    background-color: #000000;
+    color: white;
+    font-weight: 500;
+    padding: 5px 11px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 8px;
+    font-size: .9rem;
+}
+
+// ---------------------------------------------------
+// #checkBtn {
+//     display: none;
+// }
+// #listing {
+//     display: none;
+// }
+// #checkBtn:checked~#listing {
+//     display: block;
+// }
+// label {
+//     cursor: pointer;
+//     border: 1px solid black;
+//     border-radius: 10px;
+//     padding: 5px 10px;
+// }
+// label:hover {
+//     background-color: lightgray;
+// }
+.imgEffect {
+    animation: fadeIn 1.5s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

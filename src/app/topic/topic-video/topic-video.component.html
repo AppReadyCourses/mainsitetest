@@ -1,0 +1,48 @@
+<div class="desktop-view-layout">
+    <app-navbar-main class="topbar-h"> </app-navbar-main>
+
+    <app-navbar-wide class="topbar-d"> </app-navbar-wide>
+
+    <div routerLink="/" class="stackmy-logo-c showwlogo">
+        <img src="assets/logo/stackmy-w.png" alt="">
+    </div>
+
+    <div routerLink="/" class="stackmy-logo-c shwodlogo">
+        <img src="assets/logo/stackmy.png" alt="">
+    </div>
+    <div class="sidebar-a">
+        <app-sidebar-menu-main> </app-sidebar-menu-main>
+    </div>
+
+    <div class="content-area" style="width: 640px; margin: 2rem auto 0;">
+
+
+
+
+        <vm-player>
+            <!-- Provider component is placed here. -->
+            <!-- By default there are no controls so let's turn them on. -->
+            <vm-player controls>
+                <vm-video cross-origin="true" poster="https://media.vimejs.com/poster.png">
+                    <!-- These are passed directly to the underlying HTML5 `<video>` element. -->
+                    <!-- Why `data-src`? Lazy loading, you can always use `src` if you prefer.  -->
+                    <source data-src="https://media.vimejs.com/720p.mp4" type="video/mp4" />
+                    <track default kind="subtitles" src="https://media.vimejs.com/subs/english.vtt" srclang="en" label="English" />
+                </vm-video>
+
+                <!-- ... -->
+            </vm-player>
+            <vm-ui>
+                <!-- UI components are placed here. -->
+                <!-- Vime components. -->
+                <vm-click-to-play></vm-click-to-play>
+                <vm-spinner></vm-spinner>
+                <vm-poster></vm-poster>
+            </vm-ui>
+        </vm-player>
+
+
+    </div>
+
+
+</div>

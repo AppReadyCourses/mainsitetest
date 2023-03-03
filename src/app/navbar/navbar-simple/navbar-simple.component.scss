@@ -1,0 +1,79 @@
+.navbar-wide-container {
+    max-width: 400px;
+    // max-height: 600px;
+    padding: 7px 10px;
+    width: 100%;
+    // margin: 1rem auto;
+    // display: flex;
+    justify-content: end;
+    // right: 2rem
+    margin-top: .7rem;
+    position: absolute;
+    right: 40px;
+}
+
+.user-image {
+    width: 40px;
+}
+
+.user-profile {
+    display: flex;
+    justify-content: space-around;
+    // max-width: 250px;
+}
+
+.icon-lists {
+    // margin: 0 auto;
+}
+
+.right {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.icon-image {
+    width: 24px;
+    text-align: center;
+    margin-top: .5rem;
+    margin-left: 1rem;
+}
+
+.left {
+    // margin-top: .5rem;
+    margin-left: 1rem;
+}
+
+.user-title {
+    font-size: 1rem;
+    // margin-top: .4rem;
+}
+
+.user-work {
+    font-size: .9rem;
+    color: gray;
+    // margin-bottom: -.2rem;
+}
+
+.user-infos {
+    margin-top: .5rem;
+    line-height: 1.2rem;
+    // overflow: hidden;
+}
+
+.text-title {
+    // margin-top: -.3rem;
+}
+
+.profile-logo {
+    padding-top: .6rem;
+    margin-right: 1.3rem;
+}
+
+// Vertical line
+.vl {
+    border-left: 1px solid rgb(216, 216, 216);
+    height: 30px;
+    margin-right: 1.2rem;
+    margin-top: .4rem;
+}

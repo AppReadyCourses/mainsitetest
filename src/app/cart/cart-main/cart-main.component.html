@@ -1,0 +1,148 @@
+<div class="desktop-view-layout">
+    <!-- <app-navbar-main class="topbar-h">
+    </app-navbar-main> -->
+    <app-navbar-wide class="topbar-d">
+    </app-navbar-wide>
+
+
+    <div routerLink="/" class="stackmy-logo-c showwlogo">
+        <img src="assets/logo/irresistible.courses-b.png" alt="">
+    </div>
+
+    <div routerLink="/" class="stackmy-logo-c shwodlogo">
+        <img src="assets/logo/irresistible.courses.png" alt="">
+    </div>
+
+    <div class="sidebar-a">
+        <app-sidebar-menu-main>
+        </app-sidebar-menu-main>
+    </div>
+
+    <div class="content-b">
+        <h3 class="header">My cart</h3>
+
+        <h4 class="no-item-container" *ngIf="noItemInCart">
+            You have no item in cart
+        </h4>
+
+        <div class="pricing-content" *ngIf="!noItemInCart">
+            <div class="cart-container" *ngIf="cartItems">
+                <div class="item-container " *ngFor="let course of cartItems$ | async; let i = index">
+
+                    <div class="img-container">
+                        <img class="card-image" src="assets/productShots/gaming-site.png " alt=" ">
+                    </div>
+                    <div class="item-info-box">
+                        <div class="cart-title">
+                            {{i + 1}}. {{course.courseName}}
+                        </div>
+                        <div class="cart-title-info">
+                            {{course.courseIntroduction}}
+                        </div>
+                        <div class="cart-title-price" *ngIf="course.coursePrice">
+                            Course Price: {{course.coursePrice | currency: 'USD'}}
+                        </div>
+
+                    </div>
+
+                    <div class="trash-img-container" (click)="removeItem(course.id, course)">
+                        <svg-icon class="cart-icon" src="assets/icon/bxs-trash.svg" [svgStyle]="{ 'width.px':45, 'margin-top.px':7 }"></svg-icon>
+                    </div>
+
+                </div>
+
+
+                <div class="divider"></div>
+
+                <div class="total-container">
+
+                    <div class="total-text">
+                        Total:
+                    </div>
+                    <div class="total-counts-text">
+                        {{totalPrice | currency: 'USD'}}
+                    </div>
+
+
+                </div>
+
+
+            </div>
+            <div *ngIf="!cartItems$">
+                no items in cart
+            </div>
+            <div class="btn-adjust">
+                <button class="btn-pricing" (click)="placeOrder()">
+                        Place order
+                    </button>
+
+            </div>
+
+
+
+        </div>
+
+        <!-- <div>
+
+            <div class="payment-summary-header">
+                Order Summary
+            </div>
+
+
+            <div class="payment-summary-container">
+                <div *ngFor="let course of cartItems$ | async; let i = index">
+
+                    <div class="payment-info-container">
+                        <div class="payment-info-title">
+                            {{i + 1}}. {{course.courseName}}
+                        </div>
+
+                        <div class="payment-info-price">
+                            {{course.coursePrice | currency: 'USD'}}
+                        </div>
+                    </div>
+
+                </div>
+                <div class="payment-divider"></div>
+                <div class="payment-total-container">
+                    <div>Total: </div>
+                    <div>
+                        {{totalPrice | currency: 'USD'}}
+                    </div>
+                </div>
+
+                <div class="payment-divider"></div>
+                <div class="payment-caution">
+                    1. Currently we only accept PayPal payments, if you don’t have PayPal account, you can register here. <br> 2. Once the transaction is completed, you can view the course you purchased in “My learning” section. <br> 3. If there's any
+                    issues before/after purchase, you can contact us at stackmy@gmail.com, please include a screen shot of your payPal payment history.
+                </div>
+            </div>
+
+            <div class="btn-adjust">
+                <button class="btn-pricing">
+                        Go back to my cart
+                    </button>
+
+            </div>
+        </div> -->
+        <!-- <div *ngIf="showSummary" class="paypal-container">
+            <div #paypal></div>
+        </div> -->
+
+
+
+
+        <!-- <div *ngIf="cartItems">
+            <div *ngFor="let item of cartItems">
+                {{item.courseName}}
+            </div>
+        </div> -->
+
+        <!-- <button (click)="addCourse1()">
+            add course 1
+        </button>
+        <button (click)="addCourse2()">
+            add course 2
+        </button> -->
+
+        <!-- <button (click)="test()">Test</button> -->

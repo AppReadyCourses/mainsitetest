@@ -1,0 +1,89 @@
+.section-container {
+    max-width: 360px;
+    background: white;
+    padding: 10px 11px;
+    box-shadow: rgba(24, 39, 75, 0.15) 0px 19px 80px, rgba(24, 39, 75, 0.15) 0px 10px 60px;
+    width: 100%;
+    border-radius: 18px;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-header {
+    margin-bottom: -.2rem;
+    color: crimson;
+    font-size: .7rem;
+}
+
+.section-infos {
+    display: flex;
+}
+
+.section-lecture-counts {
+    font-size: .7rem;
+    color: rgb(62, 62, 62);
+}
+
+.section-lecture-duration {
+    margin-left: .4rem;
+    font-size: .7rem;
+    color: rgb(62, 62, 62);
+}
+
+.section-left {
+    margin-left: .7rem;
+}
+
+.section-divider {
+    margin-right: .2rem;
+    color: rgb(181, 181, 181);
+}
+
+.section-chevron-down {
+    width: 2rem;
+}
+
+// Each video 
+.section-detail-container {
+    max-width: 320px;
+    background: white;
+    padding: 10px 11px;
+    box-shadow: rgba(24, 39, 75, 0.15) 0px 19px 80px, rgba(24, 39, 75, 0.15) 0px 10px 60px;
+    width: 100%;
+    border-radius: 18px;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.scetion-detail-all {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.play-circle {
+    width: 13px;
+}
+
+.play-img {
+    padding-top: .1rem;
+    padding-right: .4rem;
+}
+
+.section-detail-time {
+    font-size: .8rem;
+    color: rgb(111, 111, 111);
+}
+
+.section-detail-title {
+    padding-top: .4rem;
+    margin-left: .1rem;
+}
+
+.section-detail-left {
+    margin-left: .4rem;
+}

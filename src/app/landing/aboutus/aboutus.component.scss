@@ -1,0 +1,300 @@
+// dark mode
+.logo-view-container {
+    display: flex;
+    justify-content: space-between;
+    // align-items: center;
+    // margin-left: 2rem;
+}
+
+.toggle {
+    display: none;
+}
+
+.toggle-label {
+    position: relative;
+    display: inline-block;
+    width: 3rem;
+    height: 2.5rem;
+    overflow: hidden;
+    cursor: pointer;
+    margin-left: 2.7rem;
+}
+
+.sun,
+.moon {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: auto;
+    transition: top 0.3s;
+    user-select: none;
+}
+
+.sun {
+    top: 0;
+    fill: black;
+}
+
+.moon {
+    top: -150%;
+    fill: white;
+}
+
+.toggle:checked+.toggle-label .sun {
+    top: 150%;
+}
+
+.toggle:checked+.toggle-label .moon {
+    top: 0;
+}
+
+
+// DESKTOP
+.desktop-view-layout {
+    display: flex;
+    column-gap: .5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+
+
+
+
+.stackmy-logo-c {
+    width: 180px;
+    margin: 0rem 0 0 3rem;
+}
+
+
+
+// --------------  Wide screen card  -------------- 
+.wide-screen-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    //  ------- Scroll Bar --------
+    height: 600px;
+    max-width: 1050px;
+    overflow-y: scroll;
+    //  ------- Scroll Bar --------
+    // background-color: #1B1B1B;
+    background-color: var(--back-ground-color);
+    column-gap: 10px;
+    justify-content: center;
+    transition: all 0.3s linear;
+}
+
+.wide-screen-card-title {
+    font-size: .8rem;
+    color: var(--text-color);
+}
+
+.wide-screen-card {
+    max-width: 330px;
+    background: var(--bg-mylearning-color);
+    height: 410px;
+    padding: 10px 11px;
+    // box-shadow: rgba(24, 39, 75, 0.15) 0px 19px 80px, rgba(24, 39, 75, 0.15) 0px 10px 60px;
+    box-shadow: var(--course-back-ground-dark);
+    width: 100%;
+    border-radius: 18px;
+    margin: 1rem 1rem;
+    position: relative;
+}
+
+.wide-screen-card-image-head {
+    width: 330px;
+}
+
+.wide-screen-card-image {
+    border-radius: 18px 18px 0 0;
+    margin: -10px 0 0 -11px;
+}
+
+.wide-screen-card-extra {
+    margin-top: .2rem;
+}
+
+.wide-screen-card-duration {
+    font-size: .6rem;
+    // padding: 1rem;
+    border-radius: 5px;
+    padding: 1px 3px;
+    display: inline-block;
+    border: 2px solid var(--course-detail-btn-bg);
+    color: var(--course-detail-tile);
+    background: var(--course-detail-btn-bg);
+    font-weight: 600;
+}
+
+.wide-screen-card-paid {
+    font-size: .6rem;
+    border-radius: 5px;
+    padding: 1px 4px;
+    display: inline-block;
+    font-weight: 600;
+    align-self: center;
+    margin-left: .5rem;
+    // border: 2px solid var(--course-detail-btn-paid);
+    // color: var(--course-detail-btn-paid);
+    border: 2px solid var(--course-detail-btn-bg);
+    color: var(--course-detail-tile);
+    background: var(--course-detail-btn-bg);
+}
+
+.wide-screen-card-free {
+    font-size: .6rem;
+    border: 2px solid var(--course-detail-btn-bg);
+    border-radius: 5px;
+    padding: 1px 4px;
+    display: inline-block;
+    color: var(--course-detail-tile);
+    font-weight: 600;
+    align-self: center;
+    margin-left: .5rem;
+}
+
+.wide-screen-card-price {
+    margin-left: .5rem;
+    font-size: .6rem;
+    border-radius: 5px;
+    padding: 1px 4px;
+    display: inline-block;
+    box-shadow: rgba(24, 39, 75, 0.15) 0px 19px 80px, rgba(24, 39, 75, 0.15) 0px 10px 60px;
+    font-weight: 700;
+    border: 2px solid var(--course-detail-btn-bg);
+    color: var(--course-detail-btn-bg);
+}
+
+.wide-screen-card-detail {
+    margin-top: .3rem;
+    max-height: 60px;
+    overflow-y: scroll;
+}
+
+.wide-screen-card-details {
+    margin-top: .4rem;
+    font-size: .7rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    color: var(--text-color);
+}
+
+.wide-screen-card-more-info-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // margin-bottom: -1rem;
+    // margin-top: .8rem;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.wide-screen-card-more-info {
+    color: var(--text-color);
+    font-size: .8rem;
+}
+
+.arrow-icon {
+    fill: var(--text-color);
+}
+
+.wide-screen-card-arrow-icon {
+    padding-top: .3rem;
+    padding-left: .4rem;
+}
+
+
+
+
+
+
+
+
+
+// Input
+// Course cards
+// .course-card-title-container1 {
+//     font-weight: 600;
+//     max-width: 600px;
+//     display: flex;
+//     margin-left: 3rem;
+//     align-items: center;
+// }
+
+.course-title-medium {
+    color: var(--course-title-darker);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.course-title-small {
+    font-size: .8rem;
+    margin-left: 1rem;
+    color: var(--course-title-darker)
+}
+
+.newstyle {
+    color: var(--course-title-darker);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.normalStyle {
+    color: var(--course-title-darker);
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+// Before cards
+.before-cards-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+// showwlogo
+
+
+.shwodlogo {
+    display: var(--showb-logo-display);
+    visibility: var(--showb-logo-visibility);
+    transition: all 0.3s linear;
+}
+
+
+// LOGO
+
+.stackmy-logo-c {
+    width: 130px;
+    // margin: 0 0 0 1.3rem;
+}
+
+.showwlogo {
+    display: var(--showw-logo-display);
+    visibility: var(--showw-logo-visibility);
+    transition: all 0.3s linear;
+}
+
+// Head line
+
+.head-line {
+    color: var(--text-color);
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.text-c {
+    margin: 1rem auto 0;
+    max-width: 700px;
+    line-height: 2rem;
+}
+
+.night-view {
+    // margin-right: 1rem;
+}

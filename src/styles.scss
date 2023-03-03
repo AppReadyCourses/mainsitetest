@@ -1,1 +1,184 @@
-/* You can add global styles to this file, and also import other style files */
+/*==================== GOOGLE FONTS ====================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import '~highlight.js/styles/atom-one-dark.css';
+@import '~@vime/core/themes/default.css';
+@import 'boxicons';
+
+/*==================== VARIABLES CSS ====================*/
+
+:root {
+    /*========== Colors ==========*/
+    /* Change favorite color - Blue 210 - Purple 250 - Green 142 - Pink 340*/
+    // --hue-color: 210;
+    /* HSL color mode */
+    --first-color: #000000;
+    --text-color: #121212;
+    --text-color-white: #f4f4f4;
+    --text-color-dark-3: #bfbfbf;
+    --active-color: #f4f4f4;
+    --second-color: #595959;
+    --second-dark-color: #313030;
+    --warm-color: #EC3B27;
+    --white-color: #FFF;
+    --back-ground-color: #f4f4f4;
+    --bg-mylearning-color: #f4f4f4;
+    --course-title-darker: #470bfa;
+    --course-title-lighter: #b399ff;
+    --course-back-ground-dark: rgba(123, 107, 136, 0.15) 0px 19px 60px, rgba(104, 93, 112, 0.15) 0px 10px 40px;
+    --course-detail-tile: #1B1B1B;
+    --course-detail-btn-bg: #b399ff;
+    --course-detail-btn-paid: #f537cc;
+    --section-header-bg: #b399ff;
+    --section-body-text: #1B1B1B;
+    --section-vl: #1B1B1B;
+    --section-btn: #1B1B1B;
+    --section-btn-bg: #470bfa;
+    --help-bodt-text: #484848;
+    --landing-page-text: #470bfa;
+    // --container-color: #FFF;
+    /*========== Font and typography ==========*/
+    --body-font: 'Poppins', sans-serif;
+    --pricing-font: 'Poppins', sans-serif;
+    --biggest-font-size: 1.75rem;
+    --normal-font-size: .938rem;
+    --h2-font-size: 1.25rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+    --tiny-font-size: .625rem;
+    // @media screen and (min-width: 968px) {
+    --biggest-font-size: 2.125rem;
+    --h2-font-size: 1.5rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+    --tiny-font-size: .688rem;
+    // }
+    /*========== Margenes Bottom ==========*/
+    --mb-0-25: .25rem;
+    --mb-0-5: .5rem;
+    --mb-1: 1rem;
+    --mb-1-25: 1.25rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    /*========== Show logo ==========*/
+    --showw-logo-display: none;
+    --showw-logo-visibility: hidden;
+    --showb-logo-display: block;
+    --showb-logo-visibility: visible;
+    /*========== SVG ==========*/
+    --svg-white: #f4f4f4;
+}
+
+// .showwlogo {
+//     display: none;
+//     visibility: hidden;
+// }
+
+/*==================== BASE ====================*/
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background: #1B1B1B;
+    // background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgb(240, 240, 240) 100%);
+    color: var(--text-color);
+}
+
+// body.white {
+//     background-color: #f2f2f2;
+// }
+// body.black {
+//     background-color: #1B1B1B;
+// }
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
+
+body:not(.dark-mode-preloading) {
+    transition: all 0.3s linear;
+}
+
+body.dark-mode {
+    --back-ground-color: #1B1B1B;
+    color: #1B1B1B;
+    ;
+    background: #1B1B1B;
+    --showw-logo-display: block;
+    --showw-logo-visibility: visible;
+    --showb-logo-display: none;
+    --showb-logo-visibility: hidden;
+    --svg-white: #1B1B1B;
+    --text-color: #f4f4f4;
+    --course-title-darker: #dbadfa;
+    --bg-mylearning-color: #2c2b2b;
+    --course-back-ground-dark: rgba(99, 49, 141, 0.05) 0px 19px 60px, rgba(99, 49, 141, 0.05) 0px 10px 40px;
+    --course-detail-tile: #1B1B1B;
+    --course-detail-btn-bg: #dbadfa;
+    --course-detail-btn-paid: #fc8ce3;
+    --section-header-bg: #3f3f3f;
+    --section-body-text: #c7c6c6;
+    --section-vl: #505050;
+    --section-btn: #1B1B1B;
+    --section-btn-bg: #f4f4f4;
+    --help-bodt-text: #ababab;
+    --landing-page-text: rgba(251, 101, 132, 255);
+}
+
+body.light-mode {
+    --back-ground-color: #f4f4f4;
+    ;
+    color: #1B1B1B;
+    background: #f4f4f4;
+    --showb-logo-display: block;
+    --showb-logo-visibility: visible;
+    --showw-logo-display: none;
+    --showw-logo-visibility: hidden;
+    --course-title-darker: #541cf9;
+    --course-back-ground-dark: rgba(123, 107, 136, 0.15) 0px 19px 60px, rgba(104, 93, 112, 0.15) 0px 10px 40px;
+    --bg-mylearning-color: #f4f4f4;
+    --course-detail-tile: #f4f4f4;
+    --course-detail-btn-bg: #6633fd;
+    --course-detail-btn-paid: #fa22cb;
+    --section-header-bg: #e4e4e4;
+    --section-body-text: #222222;
+    --section-vl: #c4c4c4;
+    --section-btn: #f4f4f4;
+    --section-btn-bg: #1B1B1B;
+    --help-bodt-text: #5b5a5a;
+    --landing-page-text: rgba(108, 99, 255, 255)
+}
+
+body.dark-mode-preloading {
+    background-color: #1B1B1B;
+    color: #f4f4f4;
+    ;
+}

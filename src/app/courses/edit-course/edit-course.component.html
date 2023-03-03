@@ -1,0 +1,30 @@
+<a routerLink="/">
+    <img class="logo" src="assets/logo/hslogo.png" alt="" />
+</a>
+<div class="wrap">
+
+    <div class="container">
+        <h4>Edit Course</h4>
+        <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+            <div class="form-group">
+                <input formControlName="courseName" name="courseName" placeholder="Course Name" type="text" />
+            </div>
+            <div class="form-group">
+                <input formControlName="courseIntroduction" name="courseIntroduction" placeholder="Course Introduction" type="text" />
+            </div>
+            <div class="form-group">
+                <input formControlName="courseType" name="courseType" placeholder="Course Type" type="text" />
+            </div>
+            <button type="submit" class="btn">
+                Submit
+            </button>
+        </form>
+
+
+    </div>
+</div>
+
+<div *ngIf="course$ | async as course">
+    {{course.courseName}}
+
+</div>

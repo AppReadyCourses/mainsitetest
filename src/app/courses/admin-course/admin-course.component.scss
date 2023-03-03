@@ -1,0 +1,33 @@
+.container {
+    max-width: 500px;
+    max-height: 600px;
+    background: white;
+    padding: 2px 16px;
+    box-shadow: rgba(24, 39, 75, 0.15) 0px 19px 80px, rgba(24, 39, 75, 0.15) 0px 10px 60px;
+    width: 100%;
+    border-radius: 20px;
+    margin: 2rem auto;
+}
+
+h4 {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: rgb(40, 40, 40);
+    margin: 15px auto;
+}
+
+.btn {
+    position: relative;
+    width: 100%;
+    padding: 14px;
+    border-radius: 14px;
+    border: 0;
+    background: #282828;
+    font-size: 1.2em;
+    color: #fff;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, .1);
+    box-shadow: 0px 3px 0px #e4e4e4;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}

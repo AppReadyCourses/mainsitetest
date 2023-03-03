@@ -1,0 +1,50 @@
+#container {
+    // display: inline-block;
+    max-width: 380px;
+    padding-top: 1rem;
+    position: sticky;
+    // overflow: hidden;
+    top: 0;
+    margin: 0 auto;
+    width: 100%;
+    z-index: 99;
+    // display: block;
+}
+
+.card {
+    /* Add border */
+    // border: 1px solid #bacdd8;
+    /* Add space between the border and the content */
+    // padding: 4px;
+    border-radius: 16px;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: rgba(24, 39, 75, 0.15) 0px 19px 80px, rgba(24, 39, 75, 0.15) 0px 10px 60px;
+}
+
+.navbar-icon {
+    width: 28px;
+}
+
+.navbar-items {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#hs-logo {
+    align-items: center;
+    padding-top: .5rem;
+}
+
+#left-box {
+    margin-right: auto;
+    margin-left: .5rem;
+}
+
+#right-box {
+    margin-left: auto;
+    // align-self: center;
+    // padding-top: .7rem;
+}

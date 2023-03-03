@@ -1,0 +1,77 @@
+.my-free-course-card {
+    max-width: 230px;
+    // max-height: 600px;
+    background: white;
+    padding: 2px 16px;
+    box-shadow: rgba(24, 39, 75, 0.15) 0px 19px 80px, rgba(24, 39, 75, 0.15) 0px 10px 60px;
+    width: 100%;
+    border-radius: 28px;
+    margin: 2rem auto;
+}
+
+.course-card-intro {
+    display: flex;
+    justify-content: space-around;
+    margin: 1.5rem auto;
+    font-size: .9rem;
+}
+
+.hs-fire {
+    width: 17px;
+}
+
+.my-free-course-item {
+    margin: .5rem .3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.my-free-course-title {
+    font-size: .8rem;
+}
+
+.my-free-course-title-complete {
+    font-size: .8rem;
+    font-weight: 700;
+}
+
+// =========== Wide Screen more info ============
+.wide-screen-card-more-info-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // margin-bottom: -1rem;
+    // margin-top: .8rem;
+    cursor: pointer;
+}
+
+.wide-screen-card-more-info {
+    color: black;
+    font-size: .8rem;
+}
+
+.wide-screen-card-arrow-icon {
+    padding-top: .3rem;
+    padding-left: .4rem;
+}
+
+// =========== Wide Screen more info ============
+.vl {
+    border-bottom: 1px solid rgb(216, 216, 216);
+}
+
+// Media Big Screen 
+@media only screen and (min-width: 1120px) {
+    .course-card {
+        max-width: 330px;
+    }
+    .course-card-info {
+        font-size: 1.1rem;
+    }
+    .hs-fire {
+        width: 19px;
+    }
+    .course-card-intro {
+        align-items: center;
+    }
+}

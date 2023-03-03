@@ -1,0 +1,42 @@
+.promo-card {
+    max-width: 200px;
+    // max-height: 600px;
+    background: white;
+    padding: 2px 16px;
+    box-shadow: rgba(24, 39, 75, 0.15) 0px 19px 80px, rgba(24, 39, 75, 0.15) 0px 10px 60px;
+    width: 100%;
+    border-radius: 28px;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.promo-title1 {
+    color: red;
+    margin-top: .8rem;
+    font-size: .9rem;
+}
+
+.promo-title2 {
+    margin-top: -.2rem;
+}
+
+.promo-beniftes {
+    font-size: .8rem;
+    color: gray;
+    line-height: 14px;
+}
+
+.price-tag {
+    display: flex;
+    margin: .6rem auto;
+}
+
+.month {
+    font-size: .8rem;
+}
+
+.arrow-icon {
+    width: 15px;
+}

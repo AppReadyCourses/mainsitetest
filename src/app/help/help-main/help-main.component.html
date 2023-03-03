@@ -1,0 +1,46 @@
+<div class="desktop-view-layout">
+    <!-- <app-navbar-main class="topbar-h">
+    </app-navbar-main> -->
+    <app-navbar-wide class="topbar-d">
+    </app-navbar-wide>
+
+    <div class="sidebar-a">
+        <app-sidebar-menu-main>
+        </app-sidebar-menu-main>
+    </div>
+
+    <div routerLink="/" class="stackmy-logo-c showwlogo">
+        <img src="assets/logo/irresistible.courses-b.png" alt="">
+    </div>
+
+    <div routerLink="/" class="stackmy-logo-c shwodlogo">
+        <img src="assets/logo/irresistible.courses.png" alt="">
+    </div>
+
+
+    <div class="faq-container">
+
+        <div class="question-items-container" *ngFor="let item of items; let i = index">
+            <div class="question-item">
+                <div class="question-a-container">
+                    <div class="faq-question">
+                        {{item.q}}
+                    </div>
+                    <svg-icon class="question-icon" *ngIf="!item.open" (click)="showQAnswer(item.id)" src="assets/icon/bx-plus-circle-w.svg" [svgStyle]="{ 'width.px':45, 'margin-top.px':7 }"></svg-icon>
+                    <svg-icon class="question-icon" *ngIf="item.open" (click)="closeQAnswer(item.id)" src="assets/icon/bx-minus-circle-w.svg" [svgStyle]="{ 'width.px':45, 'margin-top.px':7 }"></svg-icon>
+                </div>
+
+                <div class="faq-a-container">
+                    <div class="faq-answer" *ngIf="item.open">
+                        {{item.a}}
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+</div>

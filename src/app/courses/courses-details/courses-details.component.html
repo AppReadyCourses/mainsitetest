@@ -1,0 +1,162 @@
+<div class="desktop-view-layout">
+    <app-navbar-main class="topbar-h">
+    </app-navbar-main>
+    <app-navbar-wide class="topbar-d">
+    </app-navbar-wide>
+
+    <div routerLink="/" class="stackmy-logo-c showwlogo">
+        <img src="assets/logo/appready-logo-b.png" alt="">
+    </div>
+
+    <div routerLink="/" class="stackmy-logo-c shwodlogo">
+        <img src="assets/logo/appready-logo-w.png" alt="">
+    </div>
+
+    <app-sidebar-menu-main class="sidebar-a"></app-sidebar-menu-main>
+    <div class="content-b">
+        <div *ngIf="singleCourse as course">
+            <div class="details-container">
+                <div class="details-header-image">
+                    <img class="details-image" src="assets/productShots/gaming-site-banner.png" alt="">
+                </div>
+                <div class="title-tag">
+
+                    <h4 class="details-header-title">
+                        {{course.courseName}}
+                    </h4>
+                    <div class="details-tag">
+                        <div *ngIf="course.courseAdditional?.courseDuration">
+                            <p class="details-duration"> {{course.courseAdditional?.courseDuration}}</p>
+                        </div>
+                        <div>
+                            <p class="details-paid">{{course.courseType | titlecase}}</p>
+                        </div>
+                        <div *ngIf="course.coursePrice">
+                            <p class="details-price">{{course.coursePrice | currency}}</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="detail-infos-container">
+                    <p class="details-infos">{{course.courseIntroduction}}</p>
+                </div>
+
+                <div class="all-benifits">
+                    <div class="details-tech-using">
+                        <div class="details-tech-item" *ngIf="course.courseAdditional?.toolsUsed1">
+                            <img class="image-logo" [src]="[course.courseAdditional?.toolsUsedImg1]" alt="">
+                            <div>
+                                <p class="details-text">{{course.courseAdditional?.toolsUsed1}}</p>
+                            </div>
+                        </div>
+                        <div class="details-tech-item" *ngIf="course.courseAdditional?.toolsUsed2">
+                            <img class="image-logo" [src]="[course.courseAdditional?.toolsUsedImg2]" alt="">
+                            <p class="details-text">{{course.courseAdditional?.toolsUsed2}}</p>
+                        </div>
+                        <div class="details-tech-item" *ngIf="course.courseAdditional?.toolsUsed3">
+                            <img class="image-logo" [src]="[course.courseAdditional?.toolsUsedImg3]" alt="">
+                            <p class="details-text">{{course.courseAdditional?.toolsUsed3}}</p>
+                        </div>
+                        <div class="details-tech-item" *ngIf="course.courseAdditional?.toolsUsed4">
+                            <img class="image-logo" [src]="[course.courseAdditional?.toolsUsedImg4]" alt="">
+                            <p class="details-text">{{course.courseAdditional?.toolsUsed4}}</p>
+                        </div>
+                    </div>
+
+                    <div class="details-tech-covered">
+                        <div class="details-tech-covered-items first-be-item" *ngIf="course.courseAdditional?.skillsLearned1">
+                            <div class="details-tech-covered-icon">
+                                <svg-icon class="check-svg" src="assets/icon/iconmonstr-check-mark-1.svg " [svgStyle]="{ 'width.px':12} "></svg-icon>
+                            </div>
+                            <div>
+                                <p class="details-tech-covered-text">
+                                    {{course.courseAdditional?.skillsLearned1}}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="details-tech-covered-items" *ngIf="course.courseAdditional?.skillsLearned2">
+                            <div class="details-tech-covered-icon">
+                                <svg-icon class="check-svg" src="assets/icon/iconmonstr-check-mark-1.svg " [svgStyle]="{ 'width.px':12} "></svg-icon>
+                            </div>
+                            <div>
+                                <p class="details-tech-covered-text">
+                                    {{course.courseAdditional?.skillsLearned2}}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="details-tech-covered-items" *ngIf="course.courseAdditional?.skillsLearned3">
+                            <div class="details-tech-covered-icon">
+                                <svg-icon class="check-svg" src="assets/icon/iconmonstr-check-mark-1.svg " [svgStyle]="{ 'width.px':12} "></svg-icon>
+                            </div>
+                            <div>
+                                <p class="details-tech-covered-text">
+                                    {{course.courseAdditional?.skillsLearned3}}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="details-tech-covered-items" *ngIf="course.courseAdditional?.skillsLearned4">
+                            <div class="details-tech-covered-icon">
+                                <svg-icon class="check-svg" src="assets/icon/iconmonstr-check-mark-1.svg " [svgStyle]="{ 'width.px':12} "></svg-icon>
+                            </div>
+                            <div>
+                                <p class="details-tech-covered-text">
+                                    {{course.courseAdditional?.skillsLearned4}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="push-to-end">
+
+                    <div class="btn-container">
+                        <div class="card-and-favors">
+                            <div class="cart-main" *ngIf="isPaidCourse && matchCourseInCart && !continueToStudy" (click)="addCourseToCart(course.id)">
+                                <button class="add-to-cart">Add to cart</button>
+                            </div>
+                            <div class="enroll-main-container" *ngIf="!isPaidCourse && notYetEnrollML">
+                                <button (click)="enrollCourse()" class="add-to-library">Enroll now</button>
+                            </div>
+
+                        </div>
+
+                        <div class="continue-button-container" *ngIf="!isPaidCourse && continueToStudy" routerLink="/mylearning">
+                            <button class="continue-button">Continue to study</button>
+                        </div>
+
+                        <!-- <div class="buy-and-order" *ngIf="paidCourse && matchCourseInCart">
+                            <div class="buy-main">
+                                <button class="buy-button">Buy this course now</button>
+                            </div>
+                            <div class="order-main">
+                                <button class="order-button">Order subscription</button>
+                            </div>
+                        </div> -->
+
+                    </div>
+
+                    <div class="sample-site-main">
+                        <div>
+                            <a [routerLink]="['/courses/sections/', course.id]">
+                                <h5 class="sample-site">View all sections</h5>
+                            </a>
+                        </div>
+                        <div class="sample-arrow-icon">
+                            <svg-icon src="assets/icon/bx-right-arrow-alt.svg" [svgStyle]="{ 'width.px':20}"></svg-icon>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- <app-courses-details-section class="courseSelection">
+    </app-courses-details-section> -->
+
+
+</div>

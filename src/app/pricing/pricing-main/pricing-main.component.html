@@ -1,0 +1,124 @@
+<div class="desktop-view-layout">
+    <app-navbar-main class="topbar-h">
+    </app-navbar-main>
+    <app-navbar-wide class="topbar-d">
+    </app-navbar-wide>
+
+
+    <div routerLink="/" class="hslogo-c">
+        <img src="assets/logo/stackmy-black.png" alt="">
+    </div>
+
+    <div class="sidebar-a">
+        <app-sidebar-menu-main>
+        </app-sidebar-menu-main>
+    </div>
+
+    <div class="content-b">
+        <h3 class="header">Pricing</h3>
+
+        <div class="pricing-content">
+            <div class="pricing-container">
+                <div class="display">
+
+
+                    <div class="intro">
+                        Intro
+                    </div>
+                    <div>
+                        <span class="bold">$0</span>
+                        <span class="month">/month</span>
+
+                    </div>
+
+                </div>
+
+                <div class="benifits">
+                    <div class="check-icon">
+                        <svg-icon src="assets/icon/bxs-check-circle.svg" [svgStyle]="{ 'width.px':15 }"></svg-icon>
+                    </div>
+                    <div class="ptext">
+                        <p>Access to free courses</p>
+                    </div>
+                </div>
+                <div class="btn-add-space"></div>
+
+                <div class="btn-adjust">
+                    <button class="btn-pricing">
+                Get Started
+            </button>
+
+                </div>
+            </div>
+
+
+            <div class="pricing-container">
+                <div class="display-pro">
+
+
+                    <div class="intro">
+                        Pro
+                    </div>
+                    <div>
+                        <span class="bold">$14.99</span>
+                        <span class="month">/month</span>
+
+                    </div>
+
+                </div>
+
+                <div class="benifits-pro">
+                    <div class="check-icon-pro">
+                        <svg-icon src="assets/icon/bxs-check-circle.svg" [svgStyle]="{ 'width.px':15 }"></svg-icon>
+                    </div>
+                    <div class="ptext-pro">
+                        <p>Access to all paid courses</p>
+                    </div>
+                </div>
+                <div class="benifits-pro">
+                    <div class="check-icon-pro">
+                        <svg-icon src="assets/icon/bxs-check-circle.svg" [svgStyle]="{ 'width.px':15 }"></svg-icon>
+                    </div>
+                    <div class="ptext-pro">
+                        <p>Chat Support with our team</p>
+                    </div>
+                </div>
+                <div class="benifits-pro">
+                    <div class="check-icon-pro">
+                        <svg-icon src="assets/icon/bxs-check-circle.svg" [svgStyle]="{ 'width.px':15 }"></svg-icon>
+                    </div>
+                    <div class="ptext-pro">
+                        <p>Comment and discuss with pro userss</p>
+                    </div>
+                </div>
+                <div class="benifits-pro">
+                    <div class="check-icon-pro">
+                        <svg-icon src="assets/icon/bxs-check-circle.svg" [svgStyle]="{ 'width.px':15 }"></svg-icon>
+                    </div>
+                    <div class="ptext-pro">
+                        <p>Cancel any time</p>
+                    </div>
+                </div>
+
+                <div class="btn-adjust">
+                    <button class="btn-pricing">
+                Get Started
+            </button>
+
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+    <!-- 
+    <button (click)="checkOut()">
+        Buy
+    </button> -->
+
+    <!-- <ngx-paypal [config]="payPalConfig">Pay</ngx-paypal> -->
+    <!-- <div id="paypal-button-container"></div> -->
+
+</div>
+<div #paypal></div>

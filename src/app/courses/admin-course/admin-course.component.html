@@ -1,0 +1,43 @@
+<p>admin-course works!</p>
+
+<div class="container">
+    <h4>Admin</h4>
+    <div>
+        <button type="submit" class="btn" routerLink="/courses/add-course">
+            Add Course 
+        </button>
+    </div>
+    <div>
+        <button type="submit" class="btn" routerLink="/courses/sections/add-section">
+            Add Section 
+        </button>
+    </div>
+    <div>
+        <button type="submit" class="btn" routerLink="/courses/sections/topics/add-topic">
+            Add Topic 
+        </button>
+    </div>
+    <div>
+        <button type="submit" class="btn" routerLink="/courses">
+            Back to Course 
+        </button>
+    </div>
+    <div>
+        <label for=""> Course Addtional Relation</label>
+        <button type="submit" class="btn" routerLink="/courses/course-additional/add-course-property">
+            Step 1: Add Course Additional Properties
+        </button>
+        <button type="submit" class="btn" routerLink="/courses/course-additional/add-course-relation">
+            Step 2: Add Course Additional Relation to Course
+        </button>
+        <div>
+            <button type="submit" class="btn" routerLink="/courses/course-additional/delete-course-relation">
+           Delete Course Additional Relation
+        </button>
+        </div>
+    </div>
+</div>
+
+<button routerLink="/courses">
+    go to courses
+</button>

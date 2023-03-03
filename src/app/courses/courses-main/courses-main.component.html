@@ -1,0 +1,192 @@
+
+
+
+<div class="logo-view-container">
+    <div class="logo-container">
+        <div routerLink="/" class="stackmy-logo-c showwlogo">
+            <img src="assets/logo/appready-white-logo.png" alt="">
+        </div>
+
+        <div routerLink="/" class="stackmy-logo-c shwodlogo">
+            <img src="assets/logo/appready-dark-logo.png" alt="">
+        </div>
+    </div>
+
+    <div class="night-view">
+        <input id="darkMode" type="checkbox" [checked]="darkMode$ | async" (change)="onToggle()" class="toggle" />
+            <label class="toggle-label" for="darkMode">
+                <div >
+                    <svg-icon class="moon"  src="assets/icon/bxs-sun.svg" [svgStyle]="{ 'width.px':45, 'margin-top.px':12 }"></svg-icon>
+                    
+                    <svg-icon class="sun orig-moon"  src="assets/icon/bx-moon.svg" [svgStyle]="{ 'width.px':45, 'margin-top.px':12 }"></svg-icon>
+                    
+                </div>
+                
+            </label>
+    </div>
+
+</div>
+<!-- <app-newnavbar></app-newnavbar> -->
+
+
+<div class="head-line">
+    <h2 >Here's our current courses available:</h2>
+</div>
+
+
+<div class="desktop-view-layout">
+    
+        <div class="content-e " >
+            <div class="wide-screen-card-container " id="style-1 ">
+                <div >
+                    <div class="wide-screen-card">
+                        <div class="wide-screen-card-image-head ">
+                            <img class="wide-screen-card-image " src="assets/course-img/ecom-angular.jpg" alt=" ">
+                        </div>
+
+                        <div class="wide-screen-card-infos ">
+                            <h5 class="wide-screen-card-title ">E-commerce Full Stack Web Development Bootcamp 2023 </h5>
+                            <div class="wide-screen-card-extra">
+                                <p class="wide-screen-card-duration ">24 total hours </p>
+                                <p class="wide-screen-card-paid ">70 lectures</p>
+
+                                <p class="wide-screen-card-price " >USD 19.99</p>
+
+                            </div>
+                        </div>
+
+                        <div class="wide-screen-card-detail ">
+                            <p class="wide-screen-card-details ">With this course, you can build a fully workable E-commerce website
+                                that includes Frontend, Backend, HTML, CSS, Javascript, Frameworks, UI/ UX, Database, Hosting and more!
+                            </p>
+                        </div>
+                        <div class="wide-screen-card-more-info-container ">
+                            <div >
+                                <a href="https://www.udemy.com/course/the-e-commerce-full-stack-web-development-bootcamp/">
+                                    <h6 class="wide-screen-card-more-info">More info</h6>
+                                </a>
+                            </div>
+                            <div class="wide-screen-card-arrow-icon ">
+                                <svg-icon class="arrow-icon" src="assets/icon/bx-right-arrow-alt.svg " [svgStyle]="{ 'width.px':20} "></svg-icon>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- <div class="admin-btn ">
+                            <button [routerLink]="[ '/courses/edit-course', courses.id] " type="submit " class="btn ">
+                                Edit
+                            </button>
+                            <button (click)="deleteCourse(courses.id) " type="submit " class="btn ">
+                                Delete
+                            </button>
+                        </div> -->
+
+                </div>
+            </div>
+
+        </div>
+      
+    
+        <div class="content-e " >
+            <div class="wide-screen-card-container " id="style-1 ">
+                <div >
+                    <div class="wide-screen-card">
+                        <div class="wide-screen-card-image-head ">
+                            <img class="wide-screen-card-image " src="assets/course-img/ecom-angular.jpg" alt=" ">
+                        </div>
+
+                        <div class="wide-screen-card-infos ">
+                            <h5 class="wide-screen-card-title ">E-commerce Full Stack Web Development Bootcamp 2023 </h5>
+                            <div class="wide-screen-card-extra">
+                                <p class="wide-screen-card-duration ">24 total hours </p>
+                                <p class="wide-screen-card-paid ">70 lectures</p>
+
+                                <p class="wide-screen-card-price " >USD 20</p>
+
+                            </div>
+                        </div>
+
+                        <div class="wide-screen-card-detail ">
+                            <p class="wide-screen-card-details ">this is ecommerce course</p>
+                        </div>
+                        <div class="wide-screen-card-more-info-container ">
+                            <div>
+                                <a >
+                                    <h6 class="wide-screen-card-more-info ">More info</h6>
+                                </a>
+                            </div>
+                            <div class="wide-screen-card-arrow-icon ">
+                                <svg-icon class="arrow-icon" src="assets/icon/bx-right-arrow-alt.svg " [svgStyle]="{ 'width.px':20} "></svg-icon>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- <div class="admin-btn ">
+                            <button [routerLink]="[ '/courses/edit-course', courses.id] " type="submit " class="btn ">
+                                Edit
+                            </button>
+                            <button (click)="deleteCourse(courses.id) " type="submit " class="btn ">
+                                Delete
+                            </button>
+                        </div> -->
+
+                </div>
+            </div>
+
+        </div>
+        <div class="content-e " >
+            <div class="wide-screen-card-container " id="style-1 ">
+                <div >
+                    <div class="wide-screen-card">
+                        <div class="wide-screen-card-image-head ">
+                            <img class="wide-screen-card-image " src="assets/course-img/ecom-angular.jpg" alt=" ">
+                        </div>
+
+                        <div class="wide-screen-card-infos ">
+                            <h5 class="wide-screen-card-title ">E-commerce Full Stack Web Development Bootcamp 2023 </h5>
+                            <div class="wide-screen-card-extra">
+                                <p class="wide-screen-card-duration ">24 total hours </p>
+                                <p class="wide-screen-card-paid ">70 lectures</p>
+
+                                <p class="wide-screen-card-price " >USD 20</p>
+
+                            </div>
+                        </div>
+
+                        <div class="wide-screen-card-detail ">
+                            <p class="wide-screen-card-details ">this is ecommerce course</p>
+                        </div>
+                        <div class="wide-screen-card-more-info-container ">
+                            <div>
+                                <a >
+                                    <h6 class="wide-screen-card-more-info ">More info</h6>
+                                </a>
+                            </div>
+                            <div class="wide-screen-card-arrow-icon ">
+                                <svg-icon class="arrow-icon" src="assets/icon/bx-right-arrow-alt.svg " [svgStyle]="{ 'width.px':20} "></svg-icon>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- <div class="admin-btn ">
+                            <button [routerLink]="[ '/courses/edit-course', courses.id] " type="submit " class="btn ">
+                                Edit
+                            </button>
+                            <button (click)="deleteCourse(courses.id) " type="submit " class="btn ">
+                                Delete
+                            </button>
+                        </div> -->
+
+                </div>
+            </div>
+
+        </div>
+
+    
+    
+</div>
+
+

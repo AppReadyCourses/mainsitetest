@@ -1,0 +1,347 @@
+// =============== DESKTOP  ==============
+.desktop-view-layout {
+    display: grid;
+    column-gap: .5rem;
+    grid-template-columns: 260px 1fr 1fr 1fr;
+    grid-template-rows: 150px 1fr 1fr;
+    grid-template-areas: "hslogo topbarArea topbarArea topbarArea " "sidebar contentArea contentArea contentArea " "sidebar contentArea contentArea contentArea ";
+    align-items: start;
+}
+
+.sidebar-a {
+    grid-area: sidebar;
+}
+
+.content-b {
+    grid-area: contentArea;
+}
+
+.stackmy-logo-c {
+    width: 180px;
+    margin: 2.6rem 0 0 3rem;
+}
+
+.topbar-d {
+    margin-top: 1rem;
+    grid-area: topbarArea;
+    align-self: start;
+    position: sticky;
+    top: 18px;
+    align-self: start;
+    z-index: 1008;
+}
+
+.topbar-h {
+    display: none;
+}
+
+.btn {
+    // position: relative;
+    width: 100%;
+    padding: 5px 9px;
+    border-radius: 8px;
+    border: 0;
+    font-size: .7em;
+    background: var(--section-btn-bg);
+    color: var(--section-btn);
+    // text-shadow: 1px 1px 0px rgba(0, 0, 0, .1);
+    // box-shadow: 0px 3px 0px #e4e4e4;
+    margin: 0.5rem 2rem;
+    font-weight: 700;
+}
+
+.btn-danger {
+    // position: relative;
+    width: 100%;
+    padding: 3px 6px;
+    border-radius: 6px;
+    border: 0;
+    background: #a50505;
+    font-size: .7em;
+    color: #fff;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, .1);
+    box-shadow: 0px 3px 0px #e4e4e4;
+    margin: 0.5rem .0;
+    font-weight: 700;
+}
+
+.btn:active {
+    top: 3px;
+    box-shadow: none;
+}
+
+.btn-container {
+    margin: .7rem auto;
+}
+
+// =============== DESKTOP  ==============
+.course-detail-container {
+    max-width: 550px;
+    background: var(--bg-mylearning-color);
+    // padding: 10px 11px;
+    box-shadow: var(--course-back-ground-dark);
+    width: 100%;
+    border-radius: 18px;
+    margin: 0 auto;
+    // display: flex;
+}
+
+.course-section-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.back-logo {
+    width: 25px;
+    color: rgb(63, 63, 63);
+}
+
+.back-logo-container {
+    margin-right: 1rem;
+}
+
+.course-section-header {
+    // text-align: center;
+    margin-left: 2.2rem;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+.course-head {
+    max-width: 550px;
+    width: 100%;
+    // margin: 0 auto;
+    border-radius: 18px 18px 0 0;
+    background-color: var(--section-header-bg);
+    text-align: center;
+    // margin: 2rem auto;
+    padding-top: 1.5rem;
+    padding-bottom: .8rem;
+}
+
+// .right-arrow-icon {
+//     width: 30px;
+// }
+.arrow-icon {
+    fill: var(--text-color);
+}
+
+.right-arrow-icon-container {
+    padding-top: .6rem;
+    cursor: pointer;
+}
+
+.hs-logo {
+    width: 12px;
+}
+
+.fire-logo {
+    padding-top: .11rem;
+}
+
+// Bottom
+.section-items {
+    width: 100%;
+    // border-radius: 0 0 18px 18px;
+    // background: rgb(247, 247, 247);
+}
+
+.section-item:last-child>.section-body {
+    padding-bottom: .8rem;
+}
+
+.divider {
+    content: '';
+    border-bottom: 1px solid var(--section-vl);
+    width: 480px;
+    margin: 0.7rem auto 0.7rem;
+}
+
+.section-bg {
+    background: var(--bg-mylearning-color);
+    border-radius: 0 0 18px 18px;
+    margin: 0.5rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    //  ------- Scroll Bar --------
+    max-height: 500px;
+    // max-width: 550px;
+    overflow-y: scroll;
+    //  ------- Scroll Bar --------
+    column-gap: 10px;
+    // justify-content: center;
+}
+
+.section-item {
+    margin: 0.4rem .7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-header {
+    // display: flex;
+    // justify-content: space-between;
+    margin: 0 1.5rem 0;
+    align-items: center;
+}
+
+.section-title {
+    color: var(--text-color);
+    font-size: .9rem;
+}
+
+.section-body {
+    // display: flex;
+    // justify-content: left;
+    // margin-left: 1.2rem;
+    // margin-top: -.7rem;
+    margin-right: .5rem;
+}
+
+.section-course-counts {
+    font-size: .7rem;
+    // margin-left: .4rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.section-course-duration {
+    font-size: .7rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.extra-info {
+    display: flex;
+    margin-top: .4rem;
+}
+
+.text-700 {
+    font-weight: 700;
+    color: var( --course-title-darker);
+}
+
+// =========  Section Intro  ==========
+.section-intro-container {
+    margin: .3rem auto;
+    overflow-wrap: break-word;
+    max-width: 430px;
+}
+
+.section-intro {
+    font-size: .7rem;
+    color: var(--section-body-text);
+}
+
+// =========  Section Intro  ==========
+.vl {
+    border-left: 1px solid var(--section-body-text);
+    height: 12px;
+    margin: .2rem .7rem;
+}
+
+.section-items:last-child>.divider {
+    display: none;
+}
+
+// Topic ---------------------------- Display 
+.section-single-item {
+    margin: 1rem 2rem;
+    align-items: center;
+}
+
+// ----------- form control -----------
+.form-control {
+    font-weight: 700;
+    line-height: 1.1;
+    display: grid;
+    grid-template-columns: 1em auto;
+    gap: 0.5em;
+}
+
+input[type="checkbox"] {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    /* Remove most all native input styles */
+    appearance: none;
+    /* For iOS < 15 */
+    background-color: var(--form-background);
+    /* Not removed via appearance */
+    margin: 0;
+    font: inherit;
+    color: rgb(9, 9, 9);
+    width: 0.95em;
+    height: 0.95em;
+    border: 0.15em solid currentColor;
+    border-radius: 0.25em;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    width: 0.55em;
+    height: 0.55em;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+    transform: scale(0);
+    transform-origin: bottom left;
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em rgb(12, 12, 12);
+    /* Windows High Contrast Mode */
+    background-color: CanvasText;
+}
+
+input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+.section-item-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-left: 1.8rem;
+    // margin-top: -.1rem;
+}
+
+.play-logo-img {
+    // height: 12px;
+    max-width: 16px;
+}
+
+.form-section-title {
+    font-weight: 500;
+    font-size: .8rem;
+    margin-left: .5rem;
+}
+
+// go back btn
+.play-logo-img {
+    width: 20px;
+    margin: .3rem auto;
+    display: block;
+}
+
+.section-item-time {
+    margin-left: .5rem;
+}
+
+.time-title {
+    font-size: .75rem;
+    color: rgb(136, 136, 136);
+}
+
+// Topic ---------------------------- Display
+// showwlogo
+.showwlogo {
+    display: var(--showw-logo-display);
+    visibility: var(--showw-logo-visibility);
+    transition: all 0.3s linear;
+}
+
+.shwodlogo {
+    display: var(--showb-logo-display);
+    visibility: var(--showb-logo-visibility);
+    transition: all 0.3s linear;
+}

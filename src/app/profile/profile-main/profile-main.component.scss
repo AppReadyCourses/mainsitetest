@@ -1,0 +1,42 @@
+.desktop-view-layout {
+    display: grid;
+    column-gap: .5rem;
+    grid-template-columns: 260px 1fr 1fr 1fr;
+    grid-template-rows: 150px 1fr 1fr;
+    grid-template-areas: "hslogo topbarArea topbarArea topbarArea" "sidebar contentArea contentArea contentArea" "sidebar contentArea contentArea contentArea";
+    align-items: start;
+}
+
+.sidebar-a {
+    grid-area: sidebar;
+}
+
+.content-b {
+    grid-area: contentArea;
+    z-index: 100;
+}
+
+.hslogo-c {
+    grid-area: hslogo;
+}
+
+.topbar-d {
+    margin-top: 1rem;
+    grid-area: topbarArea;
+}
+
+.hslogo-c {
+    width: 160px;
+    margin: 2.2rem 4rem;
+}
+
+.vm-container {
+    width: 700px;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+// Mobile view bar display none
+.topbar-h {
+    display: none;
+}

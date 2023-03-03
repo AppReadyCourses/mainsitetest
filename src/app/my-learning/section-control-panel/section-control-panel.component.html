@@ -1,0 +1,61 @@
+<div class="control-panel-container">
+
+    <h5 class="section-top-header">Content Details</h5>
+
+    <div class="scroll-bar" id="style-1">
+        <div class="display-data" *ngFor="let section of courseData2; let index = index">
+
+            <div class="section-container" (click)="showSubItem(index)">
+                <div class="section-title">
+                    <div class="section-title-header">{{section.section_index}}. {{section.section_name}}</div>
+                    <div class="section-title-infos-container">
+                        <p class="section-title-infos-text">0 / 4</p>
+                        <p class="section-title-infos-text">|</p>
+                        <p class="section-title-infos-text">17 min</p>
+                    </div>
+                </div>
+
+                <div class="section-title-arrow">
+                    <img class="arrow-logo-img imgEffect" *ngIf="visibleIndex !== index" src="/assets/icon/chevron-down-regular-72.png" alt="">
+                    <img class="arrow-logo-img imgEffect" *ngIf="visibleIndex === index" src="/assets/icon/chevron-up-regular-72.png" alt="">
+                </div>
+
+            </div>
+
+
+
+            <div *ngIf="visibleIndex === index">
+
+                <div class="section-items-container" *ngFor="let top of section.topics">
+
+                    <div class="section-single-item">
+
+                        <label class="form-control">
+                            <input type="checkbox" name="checkbox-checked" class="section-input" />
+                            <h4 class="form-section-title" >
+                               {{top.topic_index}}. {{top.topic_title}}
+                            </h4>
+                        </label>
+
+                        <div class="section-item-container" routerLink="learn/topic/{{top.topic_index}}">
+                            <div class=" play-logo-container ">
+                                <img class="play-logo-img " src="/assets/icon/circled-play-30.png " alt=" ">
+                            </div>
+                            <div class="section-item-time ">
+                                <p class="time-title ">1 min</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+    <!-- <button class="btn-back " (click)="redirect_to_parent() ">Back</button> -->
+
+</div>

@@ -1,0 +1,124 @@
+<div class="desktop-view-layout">
+    <app-navbar-main class="topbar-h">
+    </app-navbar-main>
+
+    <app-navbar-wide class="topbar-d">
+    </app-navbar-wide>
+
+    <div routerLink="/" class="stackmy-logo-c showwlogo">
+        <img src="assets/logo/irresistible.courses-b.png" alt="">
+    </div>
+
+    <div routerLink="/" class="stackmy-logo-c shwodlogo">
+        <img src="assets/logo/irresistible.courses.png" alt="">
+    </div>
+
+    <div class="sidebar-a">
+        <app-sidebar-menu-main>
+        </app-sidebar-menu-main>
+    </div>
+
+
+    <div class="content-b">
+        <div class="welcome-subscribe-container">
+            <div class="welcome">
+                <div class="hello-left">
+                    <h3 class="welcome-msg">Hello, <span class="welcome-name">Jack</span>!</h3>
+                    <h4 class="hello-info" *ngIf="coursesCount > 1">
+                        You've got <br> <span class="course-count-bold">
+                            {{coursesCount}}
+                        </span> courses in libray.
+                    </h4>
+                    <h4 class="hello-info" *ngIf="coursesCount === 1">
+                        You've got <br> <span class="course-count-bold">
+                            1
+                        </span> course in libray.
+                    </h4>
+                    <h4 class="hello-info" *ngIf="!coursesCount">
+                        You've got <br> <span class="course-count-bold">
+                            0
+                        </span> courses in libray.
+                    </h4>
+                </div>
+                <div class="hello-right">
+                    <!-- <a [routerLink]="['/mylearning/fullstack-gaming']">
+                        <div class="to-my-learning-container">
+                            <div class="to-my-learning-container-title">
+                                <h4 class="to-my-learning-container-title1">Subscription</h4>
+                                <h6 class="to-my-learning-container-title2">Your subscription:</h6>
+                                <h6 class="to-my-learning-container-title3">Mar 22, 2022</h6>
+                            </div>
+                            <div class="to-my-learning-container-img">
+                                <img class="to-my-learning-img" src="/assets/icon/right-arrow-circle-regular-60.png" alt="">
+                            </div>
+                        </div>
+                    </a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="course-card-f">
+        <div *ngIf="noCourseToShow" class="no-course">
+            <h4>No course to show. Please visit Courses section...</h4>
+        </div>
+
+        <div *ngIf="!noCourseToShow">
+            <div class="course-card-title-container">
+                <a class=" course-title-medium " [ngClass]="{'changeTitleStyle': valueStatusMyCourses, 'backToNormal': valueStatusSetNormal}" (click)="getAllCourses()">My Courses</a>
+                <a class=" course-title-small " (click)="getPaidCourses()" [ngClass]="{'changeTitleStyle': valueStatusPaid}">Paid</a>
+                <a class=" course-title-small " (click)="getFreeCourses()" [ngClass]="{'changeTitleStyle': valueStatusFree}">Free</a>
+            </div>
+            <div class="course-card-container" *ngIf="courses$">
+                <!-- <div class="card-extend"></div> -->
+                <h6 class="card-header">Select a course to continue</h6>
+
+                <!-- <h6 class="card-header-secondary">Select a course and continue</h6> -->
+                <div class="course-card-center">
+                    <div class="course-card-items" *ngFor="let courses of courses$ | async">
+                        <div class="course-card-item">
+                            <div class="course-card-item-left">
+                                <h5>{{courses.courseName}}</h5>
+                                <div class="course-card-attributes-container">
+                                    <div class="course-card-attributes-item">
+                                        <h6>Course type: <span class="course-card-attributes-light-text"> {{courses.courseType}}</span></h6>
+                                    </div>
+                                    <div class="vl"></div>
+                                    <div class="course-card-attributes-item">
+                                        <h6>Porgress: <span class="course-card-attributes-light-text"> 78%</span></h6>
+                                    </div>
+                                    <div class="vl"></div>
+                                    <div class="course-card-attributes-item">
+                                        <h6>Duration: <span class="course-card-attributes-light-text"> 3 hours 15 mins</span></h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="course-card-item-right" (click)="deleteFreeCourse(courses.id)">
+                                <!-- <div class="play-icon-container">
+                                    <img class="play-icon" src="assets/icon/play-regular-72-red.png" alt="">
+                                </div> -->
+                                <!-- <button class="button-54" role="button">
+                                    <div>Continue</div>
+                                    <img class="play-logo" src="assets/icon/play-regular-72-b.png" alt="">
+                                </button> -->
+
+                                <svg-icon class="trash-logo" *ngIf="courses.courseType === 'free'" src="assets/icon/bxs-trash.svg" [svgStyle]="{ 'width.px':35, 'margin-top.px':7 }"></svg-icon>
+
+                            </div>
+                        </div>
+                        <!-- <div class="divider"></div> -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <div *ngFor="let courses of courses$ | async">
+    {{}}
+</div> -->
+
+<!-- <div *ngFor="let courses of courses$ | async">
+    {{courses | json}}
+</div> -->
